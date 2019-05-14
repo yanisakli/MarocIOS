@@ -13,6 +13,7 @@
 		04D56298228AABED0080B89A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04D56297228AABED0080B89A /* Assets.xcassets */; };
 		04D5629B228AABED0080B89A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04D56299228AABED0080B89A /* LaunchScreen.storyboard */; };
 		04D562A3228AB0E30080B89A /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 04D562A2228AB0E30080B89A /* logo.png */; };
+		04D562AD228AD0660080B89A /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D562AC228AD0660080B89A /* SignInViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		04D5629A228AABED0080B89A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		04D5629C228AABED0080B89A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		04D562A2228AB0E30080B89A /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logo.png; path = ../../../logo.png; sourceTree = "<group>"; };
+		04D562AC228AD0660080B89A /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 				04D56290228AABEB0080B89A /* AppDelegate.swift */,
 				04D56292228AABEB0080B89A /* ViewController.swift */,
 				04D56294228AABEB0080B89A /* Main.storyboard */,
+				04D562AC228AD0660080B89A /* SignInViewController.swift */,
 				04D56297228AABED0080B89A /* Assets.xcassets */,
 				04D56299228AABED0080B89A /* LaunchScreen.storyboard */,
 				04D5629C228AABED0080B89A /* Info.plist */,
@@ -141,6 +144,7 @@
 			files = (
 				04D56293228AABEB0080B89A /* ViewController.swift in Sources */,
 				04D56291228AABEB0080B89A /* AppDelegate.swift in Sources */,
+				04D562AD228AD0660080B89A /* SignInViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
