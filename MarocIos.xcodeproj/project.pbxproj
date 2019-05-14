@@ -19,6 +19,7 @@
 		04D562BD228B1E7B0080B89A /* parametre.png in Resources */ = {isa = PBXBuildFile; fileRef = 04D562BC228B1E7B0080B89A /* parametre.png */; };
 		04D562BF228B1E7F0080B89A /* profil.png in Resources */ = {isa = PBXBuildFile; fileRef = 04D562BE228B1E7F0080B89A /* profil.png */; };
 		04D562C1228B1E840080B89A /* projet.png in Resources */ = {isa = PBXBuildFile; fileRef = 04D562C0228B1E840080B89A /* projet.png */; };
+		04D562C3228B20940080B89A /* icons8-ms-project-filled-30.png in Resources */ = {isa = PBXBuildFile; fileRef = 04D562C2228B20940080B89A /* icons8-ms-project-filled-30.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		04D562BC228B1E7B0080B89A /* parametre.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = parametre.png; path = ../../../parametre.png; sourceTree = "<group>"; };
 		04D562BE228B1E7F0080B89A /* profil.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = profil.png; path = ../../../profil.png; sourceTree = "<group>"; };
 		04D562C0228B1E840080B89A /* projet.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = projet.png; path = ../../../projet.png; sourceTree = "<group>"; };
+		04D562C2228B20940080B89A /* icons8-ms-project-filled-30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icons8-ms-project-filled-30.png"; path = "../../../icons8-ms-project-filled-30.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 			isa = PBXGroup;
 			children = (
 				04D562C0228B1E840080B89A /* projet.png */,
+				04D562C2228B20940080B89A /* icons8-ms-project-filled-30.png */,
 				04D562BE228B1E7F0080B89A /* profil.png */,
 				04D562BA228B1DB80080B89A /* icons8-cloche-filled-30.png */,
 				04D562BC228B1E7B0080B89A /* parametre.png */,
@@ -151,6 +154,7 @@
 				04D562BF228B1E7F0080B89A /* profil.png in Resources */,
 				04D56296228AABEB0080B89A /* Main.storyboard in Resources */,
 				04D562BD228B1E7B0080B89A /* parametre.png in Resources */,
+				04D562C3228B20940080B89A /* icons8-ms-project-filled-30.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

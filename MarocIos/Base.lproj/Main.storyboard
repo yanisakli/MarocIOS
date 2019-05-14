@@ -204,20 +204,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" apportionsSegmentWidthsByContent="YES" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="vLX-NL-BoZ">
-                                <rect key="frame" x="0.0" y="86" width="414" height="28"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <segments>
-                                    <segment title="Privates projects"/>
-                                    <segment title="Publics projects"/>
-                                </segments>
-                            </segmentedControl>
                             <tabBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Q1N-fa-cgU">
                                 <rect key="frame" x="0.0" y="813" width="414" height="49"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <items>
-                                    <tabBarItem title="Project" image="projet.png" id="uEX-hz-3X7"/>
+                                    <tabBarItem title="public project" image="projet.png" id="uEX-hz-3X7"/>
+                                    <tabBarItem title="private project" image="icons8-ms-project-filled-30.png" id="1An-dE-2oC">
+                                        <inset key="landscapeImageInsets" minX="0.0" minY="5" maxX="0.0" maxY="0.0"/>
+                                        <inset key="largeContentSizeImageInsets" minX="-20" minY="-20" maxX="0.0" maxY="0.0"/>
+                                    </tabBarItem>
                                     <tabBarItem title="Profil" image="profil.png" id="dvt-7V-1US"/>
                                     <tabBarItem title="Notification" image="icons8-cloche-filled-30.png" id="07m-Fa-edF"/>
                                     <tabBarItem title="Settings" image="parametre.png" id="6l3-A0-P6n">
@@ -240,6 +236,7 @@
     </scenes>
     <resources>
         <image name="icons8-cloche-filled-30.png" width="22.5" height="22.5"/>
+        <image name="icons8-ms-project-filled-30.png" width="22.5" height="22.5"/>
         <image name="logo.png" width="1200" height="1200"/>
         <image name="parametre.png" width="22.5" height="22.5"/>
         <image name="profil.png" width="22.5" height="22.5"/>
