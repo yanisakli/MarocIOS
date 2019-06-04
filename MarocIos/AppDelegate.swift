@@ -17,6 +17,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         FirebaseApp.configure()
+        
+        window = UIWindow()
+        window?.makeKeyAndVisible()
+        let navController = UINavigationController(rootViewController: HomeController())
+        navController.navigationBar.barStyle = .black
+        window?.rootViewController = navController
         // Override point for customization after application launch.
         return true
     }

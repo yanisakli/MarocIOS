@@ -38,7 +38,7 @@
                                 <rect key="contentStretch" x="1" y="0.0" width="1" height="1"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocorrectionType="no" textContentType="password"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" secureTextEntry="YES" textContentType="password"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="fill" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rkr-QN-GkU">
                                 <rect key="frame" x="20" y="699" width="375" height="57"/>
@@ -55,7 +55,7 @@
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="layer.clipsToBounds" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="UIn-kt-sHh" kind="show" id="eu0-jl-SbL"/>
+                                    <action selector="LoginButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ouj-pA-d3K"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sign In" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kzM-BA-5Ti">
@@ -84,6 +84,10 @@
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </view>
+                    <connections>
+                        <outlet property="EmailField" destination="D8Z-En-W7W" id="Go7-uK-eEm"/>
+                        <outlet property="PasswordField" destination="0yf-KR-yBZ" id="CUv-CQ-hdo"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -166,7 +170,7 @@
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="layer.clipsToBounds" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="sl4-vc-pCj"/>
+                                    <action selector="SignUp:" destination="ZMK-j4-hkL" eventType="touchUpInside" id="fGt-hG-2zh"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sign Up" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z8M-7f-FDW">
@@ -191,6 +195,11 @@
                         <color key="backgroundColor" red="0.1649874449" green="0.17896100879999999" blue="0.26275563239999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <viewLayoutGuide key="safeArea" id="Qxn-fR-nGO"/>
                     </view>
+                    <connections>
+                        <outlet property="EmailField" destination="JrH-l5-47y" id="hZF-at-M80"/>
+                        <outlet property="NameField" destination="yKz-Ix-Kqx" id="mvV-nX-Bgu"/>
+                        <outlet property="PasswordField" destination="gyB-da-CEo" id="o0P-st-1lv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IOD-JZ-E0T" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -242,7 +251,4 @@
         <image name="profil.png" width="22.5" height="22.5"/>
         <image name="projet.png" width="22.5" height="22.5"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="sl4-vc-pCj"/>
-    </inferredMetricsTieBreakers>
 </document>

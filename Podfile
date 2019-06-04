@@ -8,6 +8,7 @@ target 'MarocIos' do
   # Pods for MarocIos
 
   pod 'Firebase/Core'
+  pod 'Firebase/Database'
   pod 'FirebaseUI/Auth'
 
 end
