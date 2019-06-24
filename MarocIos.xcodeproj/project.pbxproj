@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -104,7 +104,6 @@
 				B860C74CF327548E8BF9BF7A /* Pods-MarocIos.debug.xcconfig */,
 				B273AD44E687C26DAD46A136 /* Pods-MarocIos.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};

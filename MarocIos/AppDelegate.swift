@@ -19,10 +19,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         FirebaseApp.configure()
         
         window = UIWindow()
-        window?.makeKeyAndVisible()
-        let navController = UINavigationController(rootViewController: HomeController())
+        
+        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "vc")
+        
+        
+        let navController = UINavigationController(rootViewController: vc)
         navController.navigationBar.barStyle = .black
         window?.rootViewController = navController
+        
+        window?.makeKeyAndVisible()
+
         // Override point for customization after application launch.
         return true
     }
