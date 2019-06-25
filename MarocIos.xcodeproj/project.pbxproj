@@ -13,14 +13,8 @@
 		04D56296228AABEB0080B89A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04D56294228AABEB0080B89A /* Main.storyboard */; };
 		04D56298228AABED0080B89A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04D56297228AABED0080B89A /* Assets.xcassets */; };
 		04D5629B228AABED0080B89A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04D56299228AABED0080B89A /* LaunchScreen.storyboard */; };
-		04D562A3228AB0E30080B89A /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 04D562A2228AB0E30080B89A /* logo.png */; };
 		04D562AD228AD0660080B89A /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D562AC228AD0660080B89A /* SignInViewController.swift */; };
 		04D562AF228AEA930080B89A /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D562AE228AEA930080B89A /* HomeController.swift */; };
-		04D562BB228B1DB80080B89A /* icons8-cloche-filled-30.png in Resources */ = {isa = PBXBuildFile; fileRef = 04D562BA228B1DB80080B89A /* icons8-cloche-filled-30.png */; };
-		04D562BD228B1E7B0080B89A /* parametre.png in Resources */ = {isa = PBXBuildFile; fileRef = 04D562BC228B1E7B0080B89A /* parametre.png */; };
-		04D562BF228B1E7F0080B89A /* profil.png in Resources */ = {isa = PBXBuildFile; fileRef = 04D562BE228B1E7F0080B89A /* profil.png */; };
-		04D562C1228B1E840080B89A /* projet.png in Resources */ = {isa = PBXBuildFile; fileRef = 04D562C0228B1E840080B89A /* projet.png */; };
-		04D562C3228B20940080B89A /* icons8-ms-project-filled-30.png in Resources */ = {isa = PBXBuildFile; fileRef = 04D562C2228B20940080B89A /* icons8-ms-project-filled-30.png */; };
 		CE428C7F98A46D2D8E56282F /* Pods_MarocIos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB3AC4BEEBE228734797FC2F /* Pods_MarocIos.framework */; };
 /* End PBXBuildFile section */
 
@@ -33,14 +27,8 @@
 		04D56297228AABED0080B89A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		04D5629A228AABED0080B89A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		04D5629C228AABED0080B89A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		04D562A2228AB0E30080B89A /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logo.png; path = ../../../logo.png; sourceTree = "<group>"; };
 		04D562AC228AD0660080B89A /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		04D562AE228AEA930080B89A /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
-		04D562BA228B1DB80080B89A /* icons8-cloche-filled-30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icons8-cloche-filled-30.png"; path = "../../../icons8-cloche-filled-30.png"; sourceTree = "<group>"; };
-		04D562BC228B1E7B0080B89A /* parametre.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = parametre.png; path = ../../../parametre.png; sourceTree = "<group>"; };
-		04D562BE228B1E7F0080B89A /* profil.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = profil.png; path = ../../../profil.png; sourceTree = "<group>"; };
-		04D562C0228B1E840080B89A /* projet.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = projet.png; path = ../../../projet.png; sourceTree = "<group>"; };
-		04D562C2228B20940080B89A /* icons8-ms-project-filled-30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icons8-ms-project-filled-30.png"; path = "../../../icons8-ms-project-filled-30.png"; sourceTree = "<group>"; };
 		B273AD44E687C26DAD46A136 /* Pods-MarocIos.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MarocIos.release.xcconfig"; path = "Target Support Files/Pods-MarocIos/Pods-MarocIos.release.xcconfig"; sourceTree = "<group>"; };
 		B860C74CF327548E8BF9BF7A /* Pods-MarocIos.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MarocIos.debug.xcconfig"; path = "Target Support Files/Pods-MarocIos/Pods-MarocIos.debug.xcconfig"; sourceTree = "<group>"; };
 		FB3AC4BEEBE228734797FC2F /* Pods_MarocIos.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MarocIos.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -79,12 +67,6 @@
 		04D5628F228AABEB0080B89A /* MarocIos */ = {
 			isa = PBXGroup;
 			children = (
-				04D562C0228B1E840080B89A /* projet.png */,
-				04D562C2228B20940080B89A /* icons8-ms-project-filled-30.png */,
-				04D562BE228B1E7F0080B89A /* profil.png */,
-				04D562BA228B1DB80080B89A /* icons8-cloche-filled-30.png */,
-				04D562BC228B1E7B0080B89A /* parametre.png */,
-				04D562A2228AB0E30080B89A /* logo.png */,
 				04D56290228AABEB0080B89A /* AppDelegate.swift */,
 				04D56292228AABEB0080B89A /* ViewController.swift */,
 				043DEC2322A54FAC001D2C29 /* GoogleService-Info.plist */,
@@ -176,16 +158,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				04D562A3228AB0E30080B89A /* logo.png in Resources */,
-				04D562C1228B1E840080B89A /* projet.png in Resources */,
 				04D5629B228AABED0080B89A /* LaunchScreen.storyboard in Resources */,
-				04D562BB228B1DB80080B89A /* icons8-cloche-filled-30.png in Resources */,
 				04D56298228AABED0080B89A /* Assets.xcassets in Resources */,
-				04D562BF228B1E7F0080B89A /* profil.png in Resources */,
 				04D56296228AABEB0080B89A /* Main.storyboard in Resources */,
 				043DEC2422A54FAC001D2C29 /* GoogleService-Info.plist in Resources */,
-				04D562BD228B1E7B0080B89A /* parametre.png in Resources */,
-				04D562C3228B20940080B89A /* icons8-ms-project-filled-30.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
