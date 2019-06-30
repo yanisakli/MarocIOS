@@ -1,13 +1,14 @@
 //
 //  AppDelegate.swift
-//  MarocIos
+//  CreateFirebaseUser
 //
-//  Created by Yanis A on 14/05/2019.
-//  Copyright © 2019 Mac. All rights reserved.
+//  Created by Stephen Dowless on 1/2/19.
+//  Copyright © 2019 Stephan Dowless. All rights reserved.
 //
 
 import UIKit
 import Firebase
+import GoogleSignIn
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,21 +17,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        
         FirebaseApp.configure()
+        GIDSignIn.sharedInstance().clientID = FirebaseApp.app()?.options.clientID
         
         window = UIWindow()
-        
-        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "vc")
-        
-        
-        let navController = UINavigationController(rootViewController: vc)
+        window?.makeKeyAndVisible()
+        let navController = UINavigationController(rootViewController: HomeController())
         navController.navigationBar.barStyle = .black
         window?.rootViewController = navController
         
-        window?.makeKeyAndVisible()
-
-        // Override point for customization after application launch.
         return true
+    }
+    
+    func application(_ application: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any])
+        -> Bool {
+            return GIDSignIn.sharedInstance().handle(url,
+                                                     sourceApplication:options[UIApplication.OpenURLOptionsKey.sourceApplication] as? String,
+                                                     annotation: [:])
     }
 
     func applicationWillResignActive(_ application: UIApplication) {

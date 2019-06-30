@@ -7,92 +7,95 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		043DEC2422A54FAC001D2C29 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 043DEC2322A54FAC001D2C29 /* GoogleService-Info.plist */; };
-		04D56291228AABEB0080B89A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D56290228AABEB0080B89A /* AppDelegate.swift */; };
-		04D56293228AABEB0080B89A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D56292228AABEB0080B89A /* ViewController.swift */; };
-		04D56296228AABEB0080B89A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04D56294228AABEB0080B89A /* Main.storyboard */; };
-		04D56298228AABED0080B89A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04D56297228AABED0080B89A /* Assets.xcassets */; };
-		04D5629B228AABED0080B89A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04D56299228AABED0080B89A /* LaunchScreen.storyboard */; };
-		04D562AD228AD0660080B89A /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D562AC228AD0660080B89A /* SignInViewController.swift */; };
-		04D562AF228AEA930080B89A /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D562AE228AEA930080B89A /* HomeController.swift */; };
-		CE428C7F98A46D2D8E56282F /* Pods_MarocIos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB3AC4BEEBE228734797FC2F /* Pods_MarocIos.framework */; };
+		238D7BE121DDBF1B0042CE88 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238D7BE021DDBF1B0042CE88 /* AppDelegate.swift */; };
+		238D7BE621DDBF1B0042CE88 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 238D7BE421DDBF1B0042CE88 /* Main.storyboard */; };
+		238D7BE821DDBF1C0042CE88 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 238D7BE721DDBF1C0042CE88 /* Assets.xcassets */; };
+		238D7BEB21DDBF1C0042CE88 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 238D7BE921DDBF1C0042CE88 /* LaunchScreen.storyboard */; };
+		238D7BF321DDBF2A0042CE88 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238D7BF221DDBF2A0042CE88 /* LoginController.swift */; };
+		238D7BF521DDBF470042CE88 /* SignUpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238D7BF421DDBF470042CE88 /* SignUpController.swift */; };
+		238D7BF721DDBF560042CE88 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238D7BF621DDBF560042CE88 /* HomeController.swift */; };
+		238D7BF921DDBF660042CE88 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238D7BF821DDBF660042CE88 /* Extensions.swift */; };
+		238D7BFD21DDC4E20042CE88 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 238D7BFC21DDC4E20042CE88 /* GoogleService-Info.plist */; };
+		B3F750A0651D3DC42FECF9FD /* Pods_CreateFirebaseUser.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF6914E3154E287FF3844508 /* Pods_CreateFirebaseUser.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		043DEC2322A54FAC001D2C29 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		04D5628D228AABEB0080B89A /* MarocIos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MarocIos.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		04D56290228AABEB0080B89A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		04D56292228AABEB0080B89A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		04D56295228AABEB0080B89A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		04D56297228AABED0080B89A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		04D5629A228AABED0080B89A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		04D5629C228AABED0080B89A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		04D562AC228AD0660080B89A /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
-		04D562AE228AEA930080B89A /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
-		B273AD44E687C26DAD46A136 /* Pods-MarocIos.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MarocIos.release.xcconfig"; path = "Target Support Files/Pods-MarocIos/Pods-MarocIos.release.xcconfig"; sourceTree = "<group>"; };
-		B860C74CF327548E8BF9BF7A /* Pods-MarocIos.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MarocIos.debug.xcconfig"; path = "Target Support Files/Pods-MarocIos/Pods-MarocIos.debug.xcconfig"; sourceTree = "<group>"; };
-		FB3AC4BEEBE228734797FC2F /* Pods_MarocIos.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MarocIos.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		238D7BDD21DDBF1B0042CE88 /* MarocIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MarocIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		238D7BE021DDBF1B0042CE88 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		238D7BE521DDBF1B0042CE88 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		238D7BE721DDBF1C0042CE88 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		238D7BEA21DDBF1C0042CE88 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		238D7BEC21DDBF1C0042CE88 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		238D7BF221DDBF2A0042CE88 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
+		238D7BF421DDBF470042CE88 /* SignUpController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpController.swift; sourceTree = "<group>"; };
+		238D7BF621DDBF560042CE88 /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
+		238D7BF821DDBF660042CE88 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		238D7BFC21DDC4E20042CE88 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
+		B528053909770C7147F04B7B /* Pods-CreateFirebaseUser.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CreateFirebaseUser.release.xcconfig"; path = "Pods/Target Support Files/Pods-CreateFirebaseUser/Pods-CreateFirebaseUser.release.xcconfig"; sourceTree = "<group>"; };
+		CC141304423A12D5D570DD98 /* Pods-CreateFirebaseUser.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CreateFirebaseUser.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CreateFirebaseUser/Pods-CreateFirebaseUser.debug.xcconfig"; sourceTree = "<group>"; };
+		CF6914E3154E287FF3844508 /* Pods_CreateFirebaseUser.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CreateFirebaseUser.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		04D5628A228AABEB0080B89A /* Frameworks */ = {
+		238D7BDA21DDBF1B0042CE88 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE428C7F98A46D2D8E56282F /* Pods_MarocIos.framework in Frameworks */,
+				B3F750A0651D3DC42FECF9FD /* Pods_CreateFirebaseUser.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		04D56284228AABEB0080B89A = {
+		2198437F4800AF3AF9C095BD /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				04D5628F228AABEB0080B89A /* MarocIos */,
-				04D5628E228AABEB0080B89A /* Products */,
-				1DFB7458E9A0D9B13B792E40 /* Pods */,
-				BA86281149C3EB757254AD95 /* Frameworks */,
+				CC141304423A12D5D570DD98 /* Pods-CreateFirebaseUser.debug.xcconfig */,
+				B528053909770C7147F04B7B /* Pods-CreateFirebaseUser.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		238D7BD421DDBF1B0042CE88 = {
+			isa = PBXGroup;
+			children = (
+				238D7BDF21DDBF1B0042CE88 /* MarocIOS */,
+				238D7BDE21DDBF1B0042CE88 /* Products */,
+				2198437F4800AF3AF9C095BD /* Pods */,
+				2B13A5B2A0C10EA3C8009B6A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
-		04D5628E228AABEB0080B89A /* Products */ = {
+		238D7BDE21DDBF1B0042CE88 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				04D5628D228AABEB0080B89A /* MarocIos.app */,
+				238D7BDD21DDBF1B0042CE88 /* MarocIOS.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		04D5628F228AABEB0080B89A /* MarocIos */ = {
+		238D7BDF21DDBF1B0042CE88 /* MarocIOS */ = {
 			isa = PBXGroup;
 			children = (
-				04D56290228AABEB0080B89A /* AppDelegate.swift */,
-				04D56292228AABEB0080B89A /* ViewController.swift */,
-				043DEC2322A54FAC001D2C29 /* GoogleService-Info.plist */,
-				04D56294228AABEB0080B89A /* Main.storyboard */,
-				04D562AC228AD0660080B89A /* SignInViewController.swift */,
-				04D56297228AABED0080B89A /* Assets.xcassets */,
-				04D56299228AABED0080B89A /* LaunchScreen.storyboard */,
-				04D5629C228AABED0080B89A /* Info.plist */,
-				04D562AE228AEA930080B89A /* HomeController.swift */,
+				238D7BE021DDBF1B0042CE88 /* AppDelegate.swift */,
+				238D7BE421DDBF1B0042CE88 /* Main.storyboard */,
+				238D7BE721DDBF1C0042CE88 /* Assets.xcassets */,
+				238D7BE921DDBF1C0042CE88 /* LaunchScreen.storyboard */,
+				238D7BEC21DDBF1C0042CE88 /* Info.plist */,
+				238D7BFC21DDC4E20042CE88 /* GoogleService-Info.plist */,
+				238D7BF221DDBF2A0042CE88 /* LoginController.swift */,
+				238D7BF421DDBF470042CE88 /* SignUpController.swift */,
+				238D7BF621DDBF560042CE88 /* HomeController.swift */,
+				238D7BF821DDBF660042CE88 /* Extensions.swift */,
 			);
-			path = MarocIos;
+			path = MarocIOS;
 			sourceTree = "<group>";
 		};
-		1DFB7458E9A0D9B13B792E40 /* Pods */ = {
+		2B13A5B2A0C10EA3C8009B6A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				B860C74CF327548E8BF9BF7A /* Pods-MarocIos.debug.xcconfig */,
-				B273AD44E687C26DAD46A136 /* Pods-MarocIos.release.xcconfig */,
-			);
-			path = Pods;
-			sourceTree = "<group>";
-		};
-		BA86281149C3EB757254AD95 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				FB3AC4BEEBE228734797FC2F /* Pods_MarocIos.framework */,
+				CF6914E3154E287FF3844508 /* Pods_CreateFirebaseUser.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -100,42 +103,42 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		04D5628C228AABEB0080B89A /* MarocIos */ = {
+		238D7BDC21DDBF1B0042CE88 /* MarocIOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 04D5629F228AABED0080B89A /* Build configuration list for PBXNativeTarget "MarocIos" */;
+			buildConfigurationList = 238D7BEF21DDBF1C0042CE88 /* Build configuration list for PBXNativeTarget "MarocIOS" */;
 			buildPhases = (
-				94E483AFF38F73563A178EA4 /* [CP] Check Pods Manifest.lock */,
-				04D56289228AABEB0080B89A /* Sources */,
-				04D5628A228AABEB0080B89A /* Frameworks */,
-				04D5628B228AABEB0080B89A /* Resources */,
-				EDD23AACBC4E37A18170BA7F /* [CP] Embed Pods Frameworks */,
-				6188E4E68398C5140ADDE0B3 /* [CP] Copy Pods Resources */,
+				8FF4201BED6FEE02AE2F4BCD /* [CP] Check Pods Manifest.lock */,
+				238D7BD921DDBF1B0042CE88 /* Sources */,
+				238D7BDA21DDBF1B0042CE88 /* Frameworks */,
+				238D7BDB21DDBF1B0042CE88 /* Resources */,
+				B0F553E7EB6D3D0B4EAA48DD /* [CP] Embed Pods Frameworks */,
+				0D43C93BC9F72DDDBAFBA676 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = MarocIos;
-			productName = MarocIos;
-			productReference = 04D5628D228AABEB0080B89A /* MarocIos.app */;
+			name = MarocIOS;
+			productName = CreateFirebaseUser;
+			productReference = 238D7BDD21DDBF1B0042CE88 /* MarocIOS.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		04D56285228AABEB0080B89A /* Project object */ = {
+		238D7BD521DDBF1B0042CE88 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1020;
-				LastUpgradeCheck = 1020;
-				ORGANIZATIONNAME = Mac;
+				LastSwiftUpdateCheck = 1000;
+				LastUpgradeCheck = 1000;
+				ORGANIZATIONNAME = "Stephan Dowless";
 				TargetAttributes = {
-					04D5628C228AABEB0080B89A = {
-						CreatedOnToolsVersion = 10.2.1;
+					238D7BDC21DDBF1B0042CE88 = {
+						CreatedOnToolsVersion = 10.0;
 					};
 				};
 			};
-			buildConfigurationList = 04D56288228AABEB0080B89A /* Build configuration list for PBXProject "MarocIos" */;
+			buildConfigurationList = 238D7BD821DDBF1B0042CE88 /* Build configuration list for PBXProject "MarocIOS" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -143,49 +146,49 @@
 				en,
 				Base,
 			);
-			mainGroup = 04D56284228AABEB0080B89A;
-			productRefGroup = 04D5628E228AABEB0080B89A /* Products */;
+			mainGroup = 238D7BD421DDBF1B0042CE88;
+			productRefGroup = 238D7BDE21DDBF1B0042CE88 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				04D5628C228AABEB0080B89A /* MarocIos */,
+				238D7BDC21DDBF1B0042CE88 /* MarocIOS */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		04D5628B228AABEB0080B89A /* Resources */ = {
+		238D7BDB21DDBF1B0042CE88 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				04D5629B228AABED0080B89A /* LaunchScreen.storyboard in Resources */,
-				04D56298228AABED0080B89A /* Assets.xcassets in Resources */,
-				04D56296228AABEB0080B89A /* Main.storyboard in Resources */,
-				043DEC2422A54FAC001D2C29 /* GoogleService-Info.plist in Resources */,
+				238D7BEB21DDBF1C0042CE88 /* LaunchScreen.storyboard in Resources */,
+				238D7BFD21DDC4E20042CE88 /* GoogleService-Info.plist in Resources */,
+				238D7BE821DDBF1C0042CE88 /* Assets.xcassets in Resources */,
+				238D7BE621DDBF1B0042CE88 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		6188E4E68398C5140ADDE0B3 /* [CP] Copy Pods Resources */ = {
+		0D43C93BC9F72DDDBAFBA676 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-MarocIos/Pods-MarocIos-resources-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-CreateFirebaseUser/Pods-CreateFirebaseUser-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-MarocIos/Pods-MarocIos-resources-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-CreateFirebaseUser/Pods-CreateFirebaseUser-resources-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MarocIos/Pods-MarocIos-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CreateFirebaseUser/Pods-CreateFirebaseUser-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		94E483AFF38F73563A178EA4 /* [CP] Check Pods Manifest.lock */ = {
+		8FF4201BED6FEE02AE2F4BCD /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -200,59 +203,60 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-MarocIos-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-CreateFirebaseUser-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		EDD23AACBC4E37A18170BA7F /* [CP] Embed Pods Frameworks */ = {
+		B0F553E7EB6D3D0B4EAA48DD /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-MarocIos/Pods-MarocIos-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-CreateFirebaseUser/Pods-CreateFirebaseUser-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-MarocIos/Pods-MarocIos-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-CreateFirebaseUser/Pods-CreateFirebaseUser-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MarocIos/Pods-MarocIos-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CreateFirebaseUser/Pods-CreateFirebaseUser-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		04D56289228AABEB0080B89A /* Sources */ = {
+		238D7BD921DDBF1B0042CE88 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				04D562AF228AEA930080B89A /* HomeController.swift in Sources */,
-				04D56293228AABEB0080B89A /* ViewController.swift in Sources */,
-				04D56291228AABEB0080B89A /* AppDelegate.swift in Sources */,
-				04D562AD228AD0660080B89A /* SignInViewController.swift in Sources */,
+				238D7BF921DDBF660042CE88 /* Extensions.swift in Sources */,
+				238D7BF721DDBF560042CE88 /* HomeController.swift in Sources */,
+				238D7BF321DDBF2A0042CE88 /* LoginController.swift in Sources */,
+				238D7BE121DDBF1B0042CE88 /* AppDelegate.swift in Sources */,
+				238D7BF521DDBF470042CE88 /* SignUpController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		04D56294228AABEB0080B89A /* Main.storyboard */ = {
+		238D7BE421DDBF1B0042CE88 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				04D56295228AABEB0080B89A /* Base */,
+				238D7BE521DDBF1B0042CE88 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		04D56299228AABED0080B89A /* LaunchScreen.storyboard */ = {
+		238D7BE921DDBF1C0042CE88 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				04D5629A228AABED0080B89A /* Base */,
+				238D7BEA21DDBF1C0042CE88 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -260,7 +264,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		04D5629D228AABED0080B89A /* Debug */ = {
+		238D7BED21DDBF1C0042CE88 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -311,7 +315,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -321,7 +325,7 @@
 			};
 			name = Debug;
 		};
-		04D5629E228AABED0080B89A /* Release */ = {
+		238D7BEE21DDBF1C0042CE88 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -366,7 +370,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -376,40 +380,40 @@
 			};
 			name = Release;
 		};
-		04D562A0228AABED0080B89A /* Debug */ = {
+		238D7BF021DDBF1C0042CE88 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B860C74CF327548E8BF9BF7A /* Pods-MarocIos.debug.xcconfig */;
+			baseConfigurationReference = CC141304423A12D5D570DD98 /* Pods-CreateFirebaseUser.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9UQU4S86FJ;
-				INFOPLIST_FILE = MarocIos/Info.plist;
+				INFOPLIST_FILE = MarocIOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = yan.MarocIos;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		04D562A1228AABED0080B89A /* Release */ = {
+		238D7BF121DDBF1C0042CE88 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B273AD44E687C26DAD46A136 /* Pods-MarocIos.release.xcconfig */;
+			baseConfigurationReference = B528053909770C7147F04B7B /* Pods-CreateFirebaseUser.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9UQU4S86FJ;
-				INFOPLIST_FILE = MarocIos/Info.plist;
+				INFOPLIST_FILE = MarocIOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = yan.MarocIos;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -417,25 +421,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		04D56288228AABEB0080B89A /* Build configuration list for PBXProject "MarocIos" */ = {
+		238D7BD821DDBF1B0042CE88 /* Build configuration list for PBXProject "MarocIOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				04D5629D228AABED0080B89A /* Debug */,
-				04D5629E228AABED0080B89A /* Release */,
+				238D7BED21DDBF1C0042CE88 /* Debug */,
+				238D7BEE21DDBF1C0042CE88 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		04D5629F228AABED0080B89A /* Build configuration list for PBXNativeTarget "MarocIos" */ = {
+		238D7BEF21DDBF1C0042CE88 /* Build configuration list for PBXNativeTarget "MarocIOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				04D562A0228AABED0080B89A /* Debug */,
-				04D562A1228AABED0080B89A /* Release */,
+				238D7BF021DDBF1C0042CE88 /* Debug */,
+				238D7BF121DDBF1C0042CE88 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 04D56285228AABEB0080B89A /* Project object */;
+	rootObject = 238D7BD521DDBF1B0042CE88 /* Project object */;
 }
