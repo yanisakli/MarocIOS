@@ -1,5 +1,5 @@
 //
-//  SettingsController.swift
+//  ProfileController.swift
 //  MarocIOS
 //
 //  Created by Yanis A on 30/06/2019.
@@ -8,13 +8,12 @@
 
 import UIKit
 
-class SettingsController: UIViewController {
+class ProfileController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        view.backgroundColor = .cyan
-        navigationController?.title = "Settings"
-
+        view.backgroundColor = .blue
+        navigationController?.title = "Profile"
     }
+
 }

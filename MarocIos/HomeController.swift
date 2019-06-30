@@ -9,20 +9,35 @@
 import UIKit
 import Firebase
 
-class HomeController: UIViewController {
+class HomeController: UITabBarController {
     
     // MARK: - Properties
     func setUpTabBar() {
-//        var projectController = UINavigationController(rootViewController: ProjectsController())
-//        projectController.tabBarItem.image = UIImage(named: "project")
-//        projectController.tabBarItem.selectedImage = UIImage(named: "project")
-//        
-//        var settingController = UINavigationController(rootViewController: SettingsController())
-//        settingController.tabBarItem.image = UIImage(named: "settings")
-//        settingController.tabBarItem.selectedImage = UIImage(named: "settings")
         
-        //viewControllers=[projectController , settingController]
+        let projectController = UINavigationController(rootViewController: ProjectsController())
+        projectController.tabBarItem.image = UIImage(named: "project")
+        projectController.tabBarItem.selectedImage = UIImage(named: "project")
         
+        let settingController = UINavigationController(rootViewController: SettingsController())
+        settingController.tabBarItem.image = UIImage(named: "settings")
+        settingController.tabBarItem.selectedImage = UIImage(named: "settings")
+        
+        let profileController = UINavigationController(rootViewController: ProfileController())
+        profileController.tabBarItem.image = UIImage(named: "profile")
+        profileController.tabBarItem.selectedImage = UIImage(named: "profile")
+        
+        let notificationsController = UINavigationController(rootViewController: NotificationsController())
+        notificationsController.tabBarItem.image = UIImage(named: "cloche")
+        notificationsController.tabBarItem.selectedImage = UIImage(named: "cloche")
+        
+        viewControllers=[projectController , notificationsController, settingController, profileController]
+        
+        
+        guard let items = tabBar.items else {return}
+        
+        for item in items {
+            item.imageInsets = UIEdgeInsets(top: -4, left: 0, bottom: -4, right: 0)
+        }
     }
     var welcomeLabel: UILabel = {
         let label = UILabel()
@@ -37,7 +52,7 @@ class HomeController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //tabBar.barTintColor = .white
+        tabBar.barTintColor = .white
         authenticateUserAndConfigureView()
         setUpTabBar()
     }
@@ -96,7 +111,7 @@ class HomeController: UIViewController {
     func configureViewComponents() {
         view.backgroundColor = UIColor(red:0.16, green:0.18, blue:0.26, alpha:1.0)
         
-        navigationItem.title = "Firebase Login"
+        navigationItem.title = "ProjecZ"
         
         navigationItem.leftBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "ic_lock_outline_white_2x"), style: .plain, target: self, action: #selector(handleSignOut))
         navigationItem.leftBarButtonItem?.tintColor = .white

@@ -12,8 +12,7 @@ class ProjectsController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = UIColor(red:0.16, green:0.18, blue:0.26, alpha:1.0)
-        navigationController?.navigationBar.prefersLargeTitles = true
+        view.backgroundColor = .white
         navigationController?.title = "Projects"
     }
 
