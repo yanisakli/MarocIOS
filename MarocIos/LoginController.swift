@@ -44,12 +44,12 @@ class LoginController: UIViewController, GIDSignInUIDelegate {
     
     let loginButton: UIButton = {
         let button = UIButton(type: .system)
-        button.setTitle("LOG IN", for: .normal)
+        button.setTitle("Log In", for: .normal)
         button.titleLabel?.font = UIFont.systemFont(ofSize: 18)
-        button.setTitleColor(UIColor.mainBlue(), for: .normal)
-        button.backgroundColor = .white
+        button.setTitleColor(UIColor(red:1.00, green:1.00, blue:1.00, alpha:1.0), for: .normal)
+        button.backgroundColor = UIColor(red:0.40, green:0.37, blue:1.00, alpha:1.0)
         button.addTarget(self, action: #selector(handleLogin), for: .touchUpInside)
-        button.layer.cornerRadius = 5
+        button.layer.cornerRadius = 10
         return button
     }()
     
@@ -57,7 +57,7 @@ class LoginController: UIViewController, GIDSignInUIDelegate {
         let dividerView = UIView()
         
         let label = UILabel()
-        label.text = "OR"
+        label.text = "Google account?"
         label.textColor = UIColor(white: 1, alpha: 0.88)
         label.font = UIFont.systemFont(ofSize: 14)
         dividerView.addSubview(label)
@@ -155,21 +155,21 @@ class LoginController: UIViewController, GIDSignInUIDelegate {
     // MARK: - Helper Functions
     
     func configureViewComponents() {
-        view.backgroundColor = UIColor.mainBlue()
+        view.backgroundColor = UIColor(red:0.16, green:0.18, blue:0.26, alpha:1.0)
         navigationController?.navigationBar.isHidden = true
         
         view.addSubview(logoImageView)
-        logoImageView.anchor(top: view.topAnchor, left: nil, bottom: nil, right: nil, paddingTop: 60, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: 150, height: 150)
+        logoImageView.anchor(top: view.topAnchor, left: nil, bottom: nil, right: nil, paddingTop: 100, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: 150, height: 150)
         logoImageView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         
         view.addSubview(emailContainerView)
-        emailContainerView.anchor(top: logoImageView.bottomAnchor, left: view.leftAnchor, bottom: nil, right: view.rightAnchor, paddingTop: 24, paddingLeft: 32, paddingBottom: 0, paddingRight: 32, width: 0, height: 50)
+        emailContainerView.anchor(top: logoImageView.bottomAnchor, left: view.leftAnchor, bottom: nil, right: view.rightAnchor, paddingTop: 100, paddingLeft: 32, paddingBottom: 0, paddingRight: 32, width: 0, height: 50)
         
         view.addSubview(passwordContainerView)
         passwordContainerView.anchor(top: emailContainerView.bottomAnchor, left: view.leftAnchor, bottom: nil, right: view.rightAnchor, paddingTop: 16, paddingLeft: 32, paddingBottom: 0, paddingRight: 32, width: 0, height: 50)
         
         view.addSubview(loginButton)
-        loginButton.anchor(top: passwordContainerView.bottomAnchor, left: view.leftAnchor, bottom: nil, right: view.rightAnchor, paddingTop: 24, paddingLeft: 32, paddingBottom: 0, paddingRight: 32, width: 0, height: 50)
+        loginButton.anchor(top: passwordContainerView.bottomAnchor, left: view.leftAnchor, bottom: nil, right: view.rightAnchor, paddingTop: 100, paddingLeft: 32, paddingBottom: 0, paddingRight: 32, width: 0, height: 50)
         
         view.addSubview(dividerView)
         dividerView.anchor(top: loginButton.bottomAnchor, left: view.leftAnchor, bottom: nil, right: view.rightAnchor, paddingTop: 24, paddingLeft: 32, paddingBottom: 0, paddingRight: 32, width: 0, height: 50)
