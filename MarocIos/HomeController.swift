@@ -81,13 +81,13 @@ class HomeController: UIViewController {
     // MARK: - Helper Functions
     
     func configureViewComponents() {
-        view.backgroundColor = UIColor.mainBlue()
+        view.backgroundColor = UIColor(red:0.16, green:0.18, blue:0.26, alpha:1.0)
         
         navigationItem.title = "Firebase Login"
         
         navigationItem.leftBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "ic_lock_outline_white_2x"), style: .plain, target: self, action: #selector(handleSignOut))
         navigationItem.leftBarButtonItem?.tintColor = .white
-        navigationController?.navigationBar.barTintColor = UIColor.mainBlue()
+        navigationController?.navigationBar.barTintColor = UIColor(red:0.16, green:0.18, blue:0.26, alpha:1.0)
         
         view.addSubview(welcomeLabel)
         welcomeLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true

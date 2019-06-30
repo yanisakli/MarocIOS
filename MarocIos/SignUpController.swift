@@ -73,12 +73,11 @@ class SignUpController: UIViewController, GIDSignInUIDelegate {
         return button
     }()
     
-    // MARK: - Init 
+    // MARK: - Init
     
     override func viewDidLoad() {
         super.viewDidLoad()
         configureViewComponents()
-        
     }
     
     // MARK: - Selectors
@@ -142,7 +141,7 @@ class SignUpController: UIViewController, GIDSignInUIDelegate {
         logoImageView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         
         view.addSubview(emailContainerView)
-        emailContainerView.anchor(top: logoImageView.bottomAnchor, left: view.leftAnchor, bottom: nil, right: view.rightAnchor, paddingTop: 24, paddingLeft: 32, paddingBottom: 0, paddingRight: 32, width: 0, height: 50)
+        emailContainerView.anchor(top: logoImageView.bottomAnchor, left: view.leftAnchor, bottom: nil, right: view.rightAnchor, paddingTop: 100, paddingLeft: 32, paddingBottom: 0, paddingRight: 32, width: 0, height: 50)
         
         view.addSubview(usernameContainerView)
         usernameContainerView.anchor(top: emailContainerView.bottomAnchor, left: view.leftAnchor, bottom: nil, right: view.rightAnchor, paddingTop: 24, paddingLeft: 32, paddingBottom: 0, paddingRight: 32, width: 0, height: 50)
