@@ -12,7 +12,18 @@ import Firebase
 class HomeController: UIViewController {
     
     // MARK: - Properties
-    
+    func setUpTabBar() {
+//        var projectController = UINavigationController(rootViewController: ProjectsController())
+//        projectController.tabBarItem.image = UIImage(named: "project")
+//        projectController.tabBarItem.selectedImage = UIImage(named: "project")
+//        
+//        var settingController = UINavigationController(rootViewController: SettingsController())
+//        settingController.tabBarItem.image = UIImage(named: "settings")
+//        settingController.tabBarItem.selectedImage = UIImage(named: "settings")
+        
+        //viewControllers=[projectController , settingController]
+        
+    }
     var welcomeLabel: UILabel = {
         let label = UILabel()
         label.textColor = .white
@@ -26,7 +37,9 @@ class HomeController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        //tabBar.barTintColor = .white
         authenticateUserAndConfigureView()
+        setUpTabBar()
     }
     
     // MARK: - Selectors
