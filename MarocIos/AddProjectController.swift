@@ -35,9 +35,6 @@ class AddProjectController: UIViewController {
         return view.textContainerView(view: view, #imageLiteral(resourceName: "icons8-rendre-un-livre-50"), subjectTextField)
     }()
     
-    
-    
-    
     lazy var informationTextField: UITextField = {
         let tf = UITextField()
         return tf.textField(withPlaceolder: "Information", isSecureTextEntry: false)
@@ -50,14 +47,20 @@ class AddProjectController: UIViewController {
     
     lazy var teamNameTextField: UITextField = {
         let tf = UITextField()
-        return tf.textField(withPlaceolder: "Team name", isSecureTextEntry: true)
+        return tf.textField(withPlaceolder: "Team name", isSecureTextEntry: false)
     }()
     
     lazy var subjectTextField: UITextField = {
         let tf = UITextField()
-        return tf.textField(withPlaceolder: "Subject", isSecureTextEntry: true)
+        return tf.textField(withPlaceolder: "Subject", isSecureTextEntry: false)
     }()
     
+    lazy var privateProjectLabel: UILabel = {
+        let tf = UILabel()
+        tf.text = "Private project ?"
+        tf.textColor = .white
+        return tf
+    }()
     
     let loginButton: UIButton = {
         let button = UIButton(type: .system)
@@ -117,8 +120,11 @@ class AddProjectController: UIViewController {
         view.addSubview(subjectContainerView)
         subjectContainerView.anchor(top: teamNameContainerView.bottomAnchor, left: view.leftAnchor, bottom: nil, right: view.rightAnchor, paddingTop: 24, paddingLeft: 32, paddingBottom: 0, paddingRight: 32, width: 0, height: 50)
         
+        view.addSubview(privateProjectLabel)
+        privateProjectLabel.anchor(top: subjectContainerView.bottomAnchor, left: view.leftAnchor, bottom: nil, right: view.rightAnchor, paddingTop: 30, paddingLeft: 40, paddingBottom: 0, paddingRight: 32, width: 0, height: 50)
+        
         view.addSubview(loginButton)
-        loginButton.anchor(top: subjectContainerView.bottomAnchor, left: view.leftAnchor, bottom: nil, right: view.rightAnchor, paddingTop: 100, paddingLeft: 32, paddingBottom: 0, paddingRight: 32, width: 0, height: 50)
+        loginButton.anchor(top: privateProjectLabel.bottomAnchor, left: view.leftAnchor, bottom: nil, right: view.rightAnchor, paddingTop: 100, paddingLeft: 32, paddingBottom: 0, paddingRight: 32, width: 0, height: 50)
     
         view.addSubview(AbortButton)
         AbortButton.anchor(top: loginButton.bottomAnchor, left: view.leftAnchor, bottom: nil, right: view.rightAnchor, paddingTop: 30, paddingLeft: 32, paddingBottom: 0, paddingRight: 32, width: 0, height: 50)
