@@ -44,7 +44,7 @@ class LoginController: UIViewController, GIDSignInUIDelegate {
     
     let loginButton: UIButton = {
         let button = UIButton(type: .system)
-        button.setTitle("Log In", for: .normal)
+        button.setTitle("LOG IN", for: .normal)
         button.titleLabel?.font = UIFont.systemFont(ofSize: 18)
         button.setTitleColor(UIColor(red:1.00, green:1.00, blue:1.00, alpha:1.0), for: .normal)
         button.backgroundColor = UIColor(red:0.40, green:0.37, blue:1.00, alpha:1.0)
@@ -57,7 +57,7 @@ class LoginController: UIViewController, GIDSignInUIDelegate {
         let dividerView = UIView()
         
         let label = UILabel()
-        label.text = "Google account?"
+        label.text = "OR"
         label.textColor = UIColor(white: 1, alpha: 0.88)
         label.font = UIFont.systemFont(ofSize: 14)
         dividerView.addSubview(label)
