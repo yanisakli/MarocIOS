@@ -39,14 +39,6 @@ class HomeController: UITabBarController {
             item.imageInsets = UIEdgeInsets(top: -4, left: 0, bottom: -4, right: 0)
         }
     }
-    var welcomeLabel: UILabel = {
-        let label = UILabel()
-        label.textColor = .white
-        label.font = UIFont.systemFont(ofSize: 28)
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.alpha = 0
-        return label
-    }()
     
     // MARK: - Init
     
@@ -70,18 +62,6 @@ class HomeController: UITabBarController {
     
     // MARK: - API
     
-    func loadUserData() {
-        guard let uid = Auth.auth().currentUser?.uid else { return }
-        Database.database().reference().child("users").child(uid).child("username").observeSingleEvent(of: .value) { (snapshot) in
-            guard let username = snapshot.value as? String else { return }
-            self.welcomeLabel.text = "Welcome, \(username)"
-            
-            UIView.animate(withDuration: 0.5, animations: {
-                self.welcomeLabel.alpha = 1
-            })
-        }
-    }
-    
     func signOut() {
         do {
             try Auth.auth().signOut()
@@ -102,7 +82,6 @@ class HomeController: UITabBarController {
             }
         } else {
             configureViewComponents()
-            loadUserData()
         }
     }
     
@@ -116,10 +95,6 @@ class HomeController: UITabBarController {
         navigationItem.leftBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "ic_lock_outline_white_2x"), style: .plain, target: self, action: #selector(handleSignOut))
         navigationItem.leftBarButtonItem?.tintColor = .white
         navigationController?.navigationBar.barTintColor = UIColor(red:0.16, green:0.18, blue:0.26, alpha:1.0)
-        
-        view.addSubview(welcomeLabel)
-        welcomeLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        welcomeLabel.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
     }
     
 }

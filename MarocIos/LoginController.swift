@@ -146,7 +146,6 @@ class LoginController: UIViewController, GIDSignInUIDelegate {
             controller.configureViewComponents()
             
             // forgot to add this in video
-            controller.loadUserData()
             
             self.dismiss(animated: true, completion: nil)
         }
@@ -212,7 +211,6 @@ extension LoginController: GIDSignInDelegate {
                 controller.configureViewComponents()
                 
                 // forgot to add this in video
-                controller.loadUserData()
                 
                 self.dismiss(animated: true, completion: nil)
             })
