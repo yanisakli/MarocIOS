@@ -32,6 +32,16 @@ class SignUpController: UIViewController, GIDSignInUIDelegate {
         return view.textContainerView(view: view, #imageLiteral(resourceName: "ic_person_outline_white_2x"), usernameTextField)
     }()
     
+    lazy var nameContainerView: UIView = {
+        let view = UIView()
+        return view.textContainerView(view: view, #imageLiteral(resourceName: "ic_person_outline_white_2x"), nameTextField)
+    }()
+    
+    lazy var familyNameContainerView: UIView = {
+        let view = UIView()
+        return view.textContainerView(view: view, #imageLiteral(resourceName: "ic_person_outline_white_2x"), familyNameTextField)
+    }()
+    
     lazy var passwordContainerView: UIView = {
         let view = UIView()
         return view.textContainerView(view: view, #imageLiteral(resourceName: "ic_lock_outline_white_2x"), passwordTextField)
@@ -45,6 +55,16 @@ class SignUpController: UIViewController, GIDSignInUIDelegate {
     lazy var usernameTextField: UITextField = {
         let tf = UITextField()
         return tf.textField(withPlaceolder: "Username", isSecureTextEntry: false)
+    }()
+    
+    lazy var nameTextField: UITextField = {
+        let tf = UITextField()
+        return tf.textField(withPlaceolder: "Name", isSecureTextEntry: false)
+    }()
+    
+    lazy var familyNameTextField: UITextField = {
+        let tf = UITextField()
+        return tf.textField(withPlaceolder: "Family name", isSecureTextEntry: false)
     }()
     
     lazy var passwordTextField: UITextField = {
@@ -87,8 +107,10 @@ class SignUpController: UIViewController, GIDSignInUIDelegate {
         guard let email = emailTextField.text else { return }
         guard let password = passwordTextField.text else { return }
         guard let username = usernameTextField.text else { return }
+        guard let name = nameTextField.text else { return }
+        guard let familyName = familyNameTextField.text else { return }
         
-        createUser(withEmail: email, password: password, username: username)
+        createUser(withEmail: email, password: password, username: username, name: name, familyName: familyName)
     }
     
     @objc func handleShowLogin() {
@@ -97,7 +119,7 @@ class SignUpController: UIViewController, GIDSignInUIDelegate {
     
     // MARK: - API
     
-    func createUser(withEmail email: String, password: String, username: String) {
+    func createUser(withEmail email: String, password: String, username: String, name: String, familyName: String) {
         
         Auth.auth().createUser(withEmail: email, password: password) { (result, error) in
             
@@ -108,7 +130,7 @@ class SignUpController: UIViewController, GIDSignInUIDelegate {
             
             guard let uid = result?.user.uid else { return }
             
-            let values = ["email": email, "username": username]
+            let values = ["email": email, "username": username, "name": name, "familyName": familyName]
             
             Database.database().reference().child("users").child(uid).updateChildValues(values, withCompletionBlock: { (error, ref) in
                 if let error = error {
@@ -141,13 +163,19 @@ class SignUpController: UIViewController, GIDSignInUIDelegate {
         logoImageView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         
         view.addSubview(emailContainerView)
-        emailContainerView.anchor(top: logoImageView.bottomAnchor, left: view.leftAnchor, bottom: nil, right: view.rightAnchor, paddingTop: 100, paddingLeft: 32, paddingBottom: 0, paddingRight: 32, width: 0, height: 50)
+        emailContainerView.anchor(top: logoImageView.bottomAnchor, left: view.leftAnchor, bottom: nil, right: view.rightAnchor, paddingTop: 60, paddingLeft: 32, paddingBottom: 0, paddingRight: 32, width: 0, height: 50)
         
         view.addSubview(usernameContainerView)
         usernameContainerView.anchor(top: emailContainerView.bottomAnchor, left: view.leftAnchor, bottom: nil, right: view.rightAnchor, paddingTop: 24, paddingLeft: 32, paddingBottom: 0, paddingRight: 32, width: 0, height: 50)
         
+        view.addSubview(nameContainerView)
+        nameContainerView.anchor(top: usernameContainerView.bottomAnchor, left: view.leftAnchor, bottom: nil, right: view.rightAnchor, paddingTop: 24, paddingLeft: 32, paddingBottom: 0, paddingRight: 32, width: 0, height: 50)
+        
+        view.addSubview(familyNameContainerView)
+        familyNameContainerView.anchor(top: nameContainerView.bottomAnchor, left: view.leftAnchor, bottom: nil, right: view.rightAnchor, paddingTop: 24, paddingLeft: 32, paddingBottom: 0, paddingRight: 32, width: 0, height: 50)
+        
         view.addSubview(passwordContainerView)
-        passwordContainerView.anchor(top: usernameContainerView.bottomAnchor, left: view.leftAnchor, bottom: nil, right: view.rightAnchor, paddingTop: 24, paddingLeft: 32, paddingBottom: 0, paddingRight: 32, width: 0, height: 50)
+        passwordContainerView.anchor(top: familyNameContainerView.bottomAnchor, left: view.leftAnchor, bottom: nil, right: view.rightAnchor, paddingTop: 24, paddingLeft: 32, paddingBottom: 0, paddingRight: 32, width: 0, height: 50)
         
         view.addSubview(loginButton)
         loginButton.anchor(top: passwordContainerView.bottomAnchor, left: view.leftAnchor, bottom: nil, right: view.rightAnchor, paddingTop: 100, paddingLeft: 32, paddingBottom: 0, paddingRight: 32, width: 0, height: 50)
