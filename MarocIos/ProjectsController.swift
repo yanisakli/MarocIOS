@@ -7,13 +7,91 @@
 //
 
 import UIKit
+import Firebase
 
+class UserModal {
+    var subject: String?
+    var prv: String?
+    
+    init( subject: String, prv: String) {
+        self.subject = subject
+        self.prv = prv
+    }
+}
 class ProjectsController: UIViewController {
 
+    var tableView = UITableView()
+    var userArr = [UserModal]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         configureViewComponents()
+        setTableView()
+//          userArr.append(UserModal(subject: "Amber Heard", prv: "32"))
+        
+        //refProjects = Database.database().reference().child("projects");
+        let refProjects = Database.database().reference().child("projects")
+        refProjects.observe(DataEventType.value, with: {(snapshot) in
+            if snapshot.childrenCount > 0 {
+                self.userArr.removeAll()
+                
+                for projects in snapshot.children.allObjects as! [DataSnapshot]{
+                    
+                    let projectObject = projects.value as? [String: String]
+                    let projectSubject = projectObject?["subject"]
+                    let projectPrv = projectObject?["isPrivate"]
+                    
+                    let prive =  (projectPrv )! == "true" ? "privé" : "public"
+                    let project = UserModal(subject: (projectSubject )!, prv: prive);
+                    self.userArr.append(project)
+                }
+                self.tableView.reloadData()
+            }
+            
+        })
     }
+    
+    func loadUserData() {
+        let refProjects = Database.database().reference().child("projects")
+        refProjects.observe(DataEventType.value, with: {(snapshot) in
+            if snapshot.childrenCount > 0 {
+                self.userArr.removeAll()
+                
+                for projects in snapshot.children.allObjects as! [DataSnapshot]{
+                    
+                    let projectObject = projects.value as? [String: String]
+                    let projectSubject = projectObject?["subject"]
+                    let projectPrv = projectObject?["isPrivate"]
+                    
+                    let project = UserModal(subject: projectSubject!, prv: projectPrv! );
+                    
+                    self.userArr.append(project)
+                }
+                self.tableView.reloadData()
+            }
+            
+        })
+    }
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
+    
+    
+    func setTableView(){
+        tableView.frame = self.view.frame
+        tableView.backgroundColor = UIColor.clear
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.separatorColor = UIColor.clear
+        tableView.backgroundColor = UIColor(red:0.16, green:0.18, blue:0.26, alpha:1.0)
+        self.view.addSubview(tableView)
+        
+        tableView.register(CustomTableViewCell.self, forCellReuseIdentifier: "Cell")
+    }
+    
+    
+    
+    
     
     let addProjectButton: UIButton = {
         let button = UIButton(type: .system)
@@ -31,11 +109,6 @@ class ProjectsController: UIViewController {
         navigationController?.pushViewController(AddProjectController(), animated: true)
     }
     
-    // MARK: - API
-    
-    
-    // MARK: - Helper Functions
-    
     func configureViewComponents() {
         view.backgroundColor = UIColor(red:0.16, green:0.18, blue:0.26, alpha:1.0)
         navigationController?.navigationBar.isHidden = true
@@ -43,7 +116,26 @@ class ProjectsController: UIViewController {
         
         view.addSubview(addProjectButton)
         addProjectButton.anchor(top: nil, left: view.leftAnchor, bottom: view.bottomAnchor, right: view.rightAnchor, paddingTop: 0, paddingLeft: 32, paddingBottom: 100, paddingRight: 32, width: 0, height: 50)
-        
     }
 
+}
+
+
+extension ProjectsController : UITableViewDelegate, UITableViewDataSource{
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return userArr.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as? CustomTableViewCell else {fatalError("Unabel to create cell")}
+        cell.namelbl.text = userArr[indexPath.row].subject
+        cell.agelbl.text = userArr[indexPath.row].prv
+        
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 120
+    }
 }

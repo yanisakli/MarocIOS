@@ -12,6 +12,7 @@
 		04C1780122C91B64006FBD71 /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C1780022C91B64006FBD71 /* ProfileController.swift */; };
 		04C1780322C91B7B006FBD71 /* NotificationsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C1780222C91B7B006FBD71 /* NotificationsController.swift */; };
 		04C1780922C92CC1006FBD71 /* AddProjectController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C1780822C92CC1006FBD71 /* AddProjectController.swift */; };
+		04C1780D22CBD645006FBD71 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C1780C22CBD645006FBD71 /* CustomTableViewCell.swift */; };
 		238D7BE121DDBF1B0042CE88 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238D7BE021DDBF1B0042CE88 /* AppDelegate.swift */; };
 		238D7BE621DDBF1B0042CE88 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 238D7BE421DDBF1B0042CE88 /* Main.storyboard */; };
 		238D7BE821DDBF1C0042CE88 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 238D7BE721DDBF1C0042CE88 /* Assets.xcassets */; };
@@ -30,6 +31,7 @@
 		04C1780022C91B64006FBD71 /* ProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileController.swift; sourceTree = "<group>"; };
 		04C1780222C91B7B006FBD71 /* NotificationsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsController.swift; sourceTree = "<group>"; };
 		04C1780822C92CC1006FBD71 /* AddProjectController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProjectController.swift; sourceTree = "<group>"; };
+		04C1780C22CBD645006FBD71 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CustomTableViewCell.swift; path = MarocIos/CustomTableViewCell.swift; sourceTree = SOURCE_ROOT; };
 		238D7BDD21DDBF1B0042CE88 /* MarocIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MarocIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		238D7BE021DDBF1B0042CE88 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		238D7BE521DDBF1B0042CE88 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 				04C1780022C91B64006FBD71 /* ProfileController.swift */,
 				04C1780222C91B7B006FBD71 /* NotificationsController.swift */,
 				04C1780822C92CC1006FBD71 /* AddProjectController.swift */,
+				04C1780C22CBD645006FBD71 /* CustomTableViewCell.swift */,
 			);
 			path = MarocIOS;
 			sourceTree = "<group>";
@@ -251,6 +254,7 @@
 			files = (
 				04C177F922C912D7006FBD71 /* SettingsController.swift in Sources */,
 				04C1780922C92CC1006FBD71 /* AddProjectController.swift in Sources */,
+				04C1780D22CBD645006FBD71 /* CustomTableViewCell.swift in Sources */,
 				238D7BF921DDBF660042CE88 /* Extensions.swift in Sources */,
 				238D7BF721DDBF560042CE88 /* HomeController.swift in Sources */,
 				04C1780322C91B7B006FBD71 /* NotificationsController.swift in Sources */,
