@@ -9,7 +9,7 @@
 import UIKit
 import Firebase
 
-class UserModal {
+class ProjectModal {
     var subject: String?
     var prv: String?
     
@@ -21,15 +21,13 @@ class UserModal {
 class ProjectsController: UIViewController {
 
     var tableView = UITableView()
-    var userArr = [UserModal]()
+    var userArr = [ProjectModal]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         configureViewComponents()
         setTableView()
-//          userArr.append(UserModal(subject: "Amber Heard", prv: "32"))
         
-        //refProjects = Database.database().reference().child("projects");
         let refProjects = Database.database().reference().child("projects")
         refProjects.observe(DataEventType.value, with: {(snapshot) in
             if snapshot.childrenCount > 0 {
@@ -42,7 +40,7 @@ class ProjectsController: UIViewController {
                     let projectPrv = projectObject?["isPrivate"]
                     
                     let prive =  (projectPrv )! == "true" ? "privé" : "public"
-                    let project = UserModal(subject: (projectSubject )!, prv: prive);
+                    let project = ProjectModal(subject: (projectSubject )!, prv: prive);
                     self.userArr.append(project)
                 }
                 self.tableView.reloadData()
@@ -51,27 +49,6 @@ class ProjectsController: UIViewController {
         })
     }
     
-    func loadUserData() {
-        let refProjects = Database.database().reference().child("projects")
-        refProjects.observe(DataEventType.value, with: {(snapshot) in
-            if snapshot.childrenCount > 0 {
-                self.userArr.removeAll()
-                
-                for projects in snapshot.children.allObjects as! [DataSnapshot]{
-                    
-                    let projectObject = projects.value as? [String: String]
-                    let projectSubject = projectObject?["subject"]
-                    let projectPrv = projectObject?["isPrivate"]
-                    
-                    let project = UserModal(subject: projectSubject!, prv: projectPrv! );
-                    
-                    self.userArr.append(project)
-                }
-                self.tableView.reloadData()
-            }
-            
-        })
-    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
@@ -85,6 +62,9 @@ class ProjectsController: UIViewController {
         tableView.separatorColor = UIColor.clear
         tableView.backgroundColor = UIColor(red:0.16, green:0.18, blue:0.26, alpha:1.0)
         self.view.addSubview(tableView)
+        
+        self.view.addSubview(addProjectButton)
+        addProjectButton.anchor(top: nil, left: view.leftAnchor, bottom: view.bottomAnchor, right: view.rightAnchor, paddingTop: 0, paddingLeft: 32, paddingBottom: 100, paddingRight: 32, width: 0, height: 50)
         
         tableView.register(CustomTableViewCell.self, forCellReuseIdentifier: "Cell")
     }
@@ -112,10 +92,6 @@ class ProjectsController: UIViewController {
     func configureViewComponents() {
         view.backgroundColor = UIColor(red:0.16, green:0.18, blue:0.26, alpha:1.0)
         navigationController?.navigationBar.isHidden = true
-        navigationController?.title = "Projects"
-        
-        view.addSubview(addProjectButton)
-        addProjectButton.anchor(top: nil, left: view.leftAnchor, bottom: view.bottomAnchor, right: view.rightAnchor, paddingTop: 0, paddingLeft: 32, paddingBottom: 100, paddingRight: 32, width: 0, height: 50)
     }
 
 }
@@ -130,7 +106,7 @@ extension ProjectsController : UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as? CustomTableViewCell else {fatalError("Unabel to create cell")}
         cell.namelbl.text = userArr[indexPath.row].subject
-        cell.agelbl.text = userArr[indexPath.row].prv
+        cell.prvlbl.text = userArr[indexPath.row].prv
         
         return cell
     }
