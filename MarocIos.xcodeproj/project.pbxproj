@@ -10,7 +10,6 @@
 		04C177F922C912D7006FBD71 /* SettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C177F822C912D7006FBD71 /* SettingsController.swift */; };
 		04C177FB22C912F0006FBD71 /* ProjectsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C177FA22C912F0006FBD71 /* ProjectsController.swift */; };
 		04C1780122C91B64006FBD71 /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C1780022C91B64006FBD71 /* ProfileController.swift */; };
-		04C1780322C91B7B006FBD71 /* NotificationsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C1780222C91B7B006FBD71 /* NotificationsController.swift */; };
 		04C1780922C92CC1006FBD71 /* AddProjectController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C1780822C92CC1006FBD71 /* AddProjectController.swift */; };
 		04C1780D22CBD645006FBD71 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C1780C22CBD645006FBD71 /* CustomTableViewCell.swift */; };
 		04C1780F22CC0763006FBD71 /* PrivacyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C1780E22CC0763006FBD71 /* PrivacyViewController.swift */; };
@@ -31,7 +30,6 @@
 		04C177F822C912D7006FBD71 /* SettingsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsController.swift; sourceTree = "<group>"; };
 		04C177FA22C912F0006FBD71 /* ProjectsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsController.swift; sourceTree = "<group>"; };
 		04C1780022C91B64006FBD71 /* ProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileController.swift; sourceTree = "<group>"; };
-		04C1780222C91B7B006FBD71 /* NotificationsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsController.swift; sourceTree = "<group>"; };
 		04C1780822C92CC1006FBD71 /* AddProjectController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProjectController.swift; sourceTree = "<group>"; };
 		04C1780C22CBD645006FBD71 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CustomTableViewCell.swift; path = MarocIos/CustomTableViewCell.swift; sourceTree = SOURCE_ROOT; };
 		04C1780E22CC0763006FBD71 /* PrivacyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PrivacyViewController.swift; path = MarocIos/PrivacyViewController.swift; sourceTree = SOURCE_ROOT; };
@@ -107,7 +105,6 @@
 				04C177F822C912D7006FBD71 /* SettingsController.swift */,
 				04C177FA22C912F0006FBD71 /* ProjectsController.swift */,
 				04C1780022C91B64006FBD71 /* ProfileController.swift */,
-				04C1780222C91B7B006FBD71 /* NotificationsController.swift */,
 				04C1780822C92CC1006FBD71 /* AddProjectController.swift */,
 				04C1780C22CBD645006FBD71 /* CustomTableViewCell.swift */,
 				04C1780E22CC0763006FBD71 /* PrivacyViewController.swift */,
@@ -264,7 +261,6 @@
 				04C1780D22CBD645006FBD71 /* CustomTableViewCell.swift in Sources */,
 				238D7BF921DDBF660042CE88 /* Extensions.swift in Sources */,
 				238D7BF721DDBF560042CE88 /* HomeController.swift in Sources */,
-				04C1780322C91B7B006FBD71 /* NotificationsController.swift in Sources */,
 				04C177FB22C912F0006FBD71 /* ProjectsController.swift in Sources */,
 				238D7BF321DDBF2A0042CE88 /* LoginController.swift in Sources */,
 				238D7BE121DDBF1B0042CE88 /* AppDelegate.swift in Sources */,
