@@ -26,11 +26,7 @@ class HomeController: UITabBarController {
         profileController.tabBarItem.image = UIImage(named: "profile")
         profileController.tabBarItem.selectedImage = UIImage(named: "profile")
         
-        let notificationsController = UINavigationController(rootViewController: NotificationsController())
-        notificationsController.tabBarItem.image = UIImage(named: "cloche")
-        notificationsController.tabBarItem.selectedImage = UIImage(named: "cloche")
-        
-        viewControllers=[projectController , notificationsController, settingController, profileController]
+        viewControllers=[projectController , settingController, profileController]
         
         
         guard let items = tabBar.items else {return}
