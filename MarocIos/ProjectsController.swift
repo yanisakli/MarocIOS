@@ -91,6 +91,7 @@ class ProjectsController: UIViewController {
     
     func configureViewComponents() {
         view.backgroundColor = UIColor(red:0.16, green:0.18, blue:0.26, alpha:1.0)
+        navigationController?.title = "Projects"
         navigationController?.navigationBar.isHidden = true
     }
 
