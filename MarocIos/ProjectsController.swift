@@ -12,10 +12,12 @@ import Firebase
 class ProjectModal {
     var subject: String?
     var prv: String?
+    var id: String?
     
-    init( subject: String, prv: String) {
+    init( subject: String, prv: String, id: String) {
         self.subject = subject
         self.prv = prv
+        self.id = id
     }
 }
 class ProjectsController: UIViewController {
@@ -38,9 +40,10 @@ class ProjectsController: UIViewController {
                     let projectObject = projects.value as? [String: String]
                     let projectSubject = projectObject?["subject"]
                     let projectPrv = projectObject?["isPrivate"]
+                    let projectId = projectObject?["id"]
                     
                     let prive =  (projectPrv )! == "true" ? "privé" : "public"
-                    let project = ProjectModal(subject: (projectSubject )!, prv: prive);
+                    let project = ProjectModal(subject: (projectSubject )!, prv: prive, id: (projectId )!);
                     self.userArr.append(project)
                 }
                 self.tableView.reloadData()
@@ -94,6 +97,10 @@ class ProjectsController: UIViewController {
         navigationController?.title = "Projects"
         navigationController?.navigationBar.isHidden = true
     }
+    
+    func handleDetailProject() {
+        navigationController?.pushViewController(AddProjectController(), animated: true)
+    }
 
 }
 
@@ -108,6 +115,10 @@ extension ProjectsController : UITableViewDelegate, UITableViewDataSource{
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as? CustomTableViewCell else {fatalError("Unabel to create cell")}
         cell.namelbl.text = userArr[indexPath.row].subject
         cell.prvlbl.text = userArr[indexPath.row].prv
+        cell.idProjectlbl.text = userArr[indexPath.row].id
+        
+        cell.cellDelegate = self
+        cell.index = indexPath
         
         return cell
     }
@@ -115,4 +126,14 @@ extension ProjectsController : UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 120
     }
+}
+
+extension ProjectsController : TableViewNew{
+    func onClickCell(index : Int, idProject : String){
+       print(idProject)
+        let vc = DetailProjectViewController()
+        vc.idProject = idProject
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    
 }
