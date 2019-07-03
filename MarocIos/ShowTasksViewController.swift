@@ -10,13 +10,13 @@ import UIKit
 import Firebase
 
 class TaskModal {
-    var subject: String?
-    var prv: String?
+    var name: String?
+    var responsable: String?
     var id: String?
     
-    init( subject: String, prv: String, id: String) {
-        self.subject = subject
-        self.prv = prv
+    init( name: String, responsable: String, id: String) {
+        self.name = name
+        self.responsable = responsable
         self.id = id
     }
 }
@@ -30,21 +30,20 @@ class ShowTasksViewController: UIViewController {
         configureViewComponents()
         setTableView()
         
-        let refProjects = Database.database().reference().child("projects")
-        refProjects.observe(DataEventType.value, with: {(snapshot) in
+        let refTasks = Database.database().reference().child("tasks")
+        refTasks.observe(DataEventType.value, with: {(snapshot) in
             if snapshot.childrenCount > 0 {
                 self.userArr.removeAll()
                 
-                for projects in snapshot.children.allObjects as! [DataSnapshot]{
+                for tasks in snapshot.children.allObjects as! [DataSnapshot]{
                     
-                    let projectObject = projects.value as? [String: String]
-                    let projectSubject = projectObject?["subject"]
-                    let projectPrv = projectObject?["isPrivate"]
-                    let projectId = projectObject?["id"]
+                    let taskObject = tasks.value as? [String: String]
+                    let taskName = taskObject?["name"]
+                    let taskResponsable = taskObject?["responsable"]
+                    let taskId = taskObject?["id"]
                     
-                    let prive =  (projectPrv )! == "true" ? "privé" : "public"
-                    let project = TaskModal(subject: (projectSubject )!, prv: prive, id: (projectId )!);
-                    self.userArr.append(project)
+                    let task = TaskModal(name: (taskName )!, responsable: (taskResponsable )!, id: (taskId )!);
+                    self.userArr.append(task)
                 }
                 self.tableView.reloadData()
             }
@@ -110,9 +109,9 @@ class ShowTasksViewController: UIViewController {
         navigationController?.popViewController(animated: true)
     }
     
+    
     func configureViewComponents() {
         view.backgroundColor = UIColor(red:0.16, green:0.18, blue:0.26, alpha:1.0)
-        navigationController?.title = "Projects"
         navigationController?.navigationBar.isHidden = true
     }
     
@@ -127,9 +126,9 @@ extension ShowTasksViewController : UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "CellTask", for: indexPath) as? TaskTableViewCell else {fatalError("Unabel to create cell")}
-        cell.namelbl.text = userArr[indexPath.row].subject
-        cell.prvlbl.text = userArr[indexPath.row].prv
-        cell.idProjectlbl.text = userArr[indexPath.row].id
+        cell.namelbl.text = userArr[indexPath.row].name
+        cell.responsablelbl.text = userArr[indexPath.row].responsable
+        cell.idTasklbl.text = userArr[indexPath.row].id
         
         cell.cellDelegate = self
         cell.index = indexPath
@@ -143,8 +142,8 @@ extension ShowTasksViewController : UITableViewDelegate, UITableViewDataSource{
 }
 
 extension ShowTasksViewController : TaskTableViewNew {
-    func onClickCell(index : Int, idProject : String){
-        print(idProject)
+    func onClickCell(index : Int, idTask : String){
+        print(idTask)
     }
     
 }

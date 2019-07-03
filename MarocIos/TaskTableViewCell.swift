@@ -9,13 +9,13 @@
 import UIKit
 
 protocol TaskTableViewNew {
-    func onClickCell(index : Int, idProject: String)
+    func onClickCell(index : Int, idTask: String)
 }
 class TaskTableViewCell: UITableViewCell {
     
     var cellDelegate : TaskTableViewNew?
     var index : IndexPath?
-    var idProject : String?
+    var idTask : String?
     
     lazy var backView: UIView = {
         let view = UIView(frame: CGRect(x: 10, y: 6, width: self.frame.width - 20, height: 110))
@@ -31,13 +31,13 @@ class TaskTableViewCell: UITableViewCell {
         return lbl
     }()
     
-    lazy var prvlbl: UILabel = {
+    lazy var responsablelbl: UILabel = {
         let lbl = UILabel(frame: CGRect(x: 50, y: 50, width: backView.frame.width - 116, height: 30))
         lbl.textAlignment = .left
         return lbl
     }()
     
-    lazy var idProjectlbl: UILabel = {
+    lazy var idTasklbl: UILabel = {
         let lbl = UILabel(frame: CGRect(x: 50, y: 50, width: backView.frame.width - 116, height: 30))
         lbl.textAlignment = .left
         return lbl
@@ -45,7 +45,7 @@ class TaskTableViewCell: UITableViewCell {
     
     let actionButton: UIButton = {
         let button = UIButton(frame: CGRect(x: 260, y: 50, width: 100, height: 30))
-        button.setTitle("Details", for: .normal)
+        button.setTitle("Delete", for: .normal)
         button.translatesAutoresizingMaskIntoConstraints = false
         button.titleLabel?.font = UIFont.systemFont(ofSize: 18)
         button.setTitleColor(UIColor(red:0.16, green:0.18, blue:0.26, alpha:1.0), for: .normal)
@@ -72,7 +72,7 @@ class TaskTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
         addSubview(backView)
         backView.addSubview(namelbl)
-        backView.addSubview(prvlbl)
+        backView.addSubview(responsablelbl)
         backView.addSubview(actionButton)
         
         actionButton.addTarget(self, action: #selector(handleDetailProjects), for: .touchUpInside)
@@ -80,7 +80,7 @@ class TaskTableViewCell: UITableViewCell {
     }
     
     @objc func handleDetailProjects() {
-        cellDelegate?.onClickCell(index: (index?.row)!,  idProject: idProjectlbl.text!)
+        cellDelegate?.onClickCell(index: (index?.row)!,  idTask: idTasklbl.text!)
     }
     
     
