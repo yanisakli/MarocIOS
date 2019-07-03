@@ -44,12 +44,12 @@ class TaskTableViewCell: UITableViewCell {
     }()
     
     let actionButton: UIButton = {
-        let button = UIButton(frame: CGRect(x: 260, y: 50, width: 100, height: 30))
+        let button = UIButton(type: .system)
         button.setTitle("Delete", for: .normal)
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.titleLabel?.font = UIFont.systemFont(ofSize: 18)
-        button.setTitleColor(UIColor(red:0.16, green:0.18, blue:0.26, alpha:1.0), for: .normal)
-        button.backgroundColor = UIColor.cyan
+        button.titleLabel?.font = UIFont.systemFont(ofSize: 10)
+        button.setTitleColor(UIColor.white, for: .normal)
+        button.backgroundColor = UIColor.red
         button.layer.cornerRadius = 10
         
         return button
@@ -75,8 +75,9 @@ class TaskTableViewCell: UITableViewCell {
         backView.addSubview(responsablelbl)
         backView.addSubview(actionButton)
         
+        actionButton.anchor(top: backView.topAnchor, left: backView.leftAnchor, bottom: nil, right: backView.rightAnchor, paddingTop: 75, paddingLeft: 320, paddingBottom: 0, paddingRight: 10, width: 0, height: 0)
         actionButton.addTarget(self, action: #selector(handleDetailProjects), for: .touchUpInside)
-        
+
     }
     
     @objc func handleDetailProjects() {

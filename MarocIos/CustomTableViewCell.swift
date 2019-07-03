@@ -44,7 +44,7 @@ class CustomTableViewCell: UITableViewCell {
     }()
     
     let actionButton: UIButton = {
-        let button = UIButton(frame: CGRect(x: 260, y: 50, width: 100, height: 30))
+        let button = UIButton(type: .system)
         button.setTitle("Details", for: .normal)
         button.translatesAutoresizingMaskIntoConstraints = false
         button.titleLabel?.font = UIFont.systemFont(ofSize: 18)
@@ -74,6 +74,8 @@ class CustomTableViewCell: UITableViewCell {
         backView.addSubview(namelbl)
         backView.addSubview(prvlbl)
         backView.addSubview(actionButton)
+        
+        actionButton.anchor(top: backView.topAnchor, left: backView.leftAnchor, bottom: nil, right: backView.rightAnchor, paddingTop: 70, paddingLeft: 310, paddingBottom: 0, paddingRight: 10, width: 0, height: 0)
         
         actionButton.addTarget(self, action: #selector(handleDetailProjects), for: .touchUpInside)
 
