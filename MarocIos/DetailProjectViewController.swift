@@ -84,7 +84,7 @@ class DetailProjectViewController: UIViewController {
         buttonOne.titleLabel?.font = UIFont.systemFont(ofSize: 18)
         buttonOne.setTitleColor(UIColor(red:1.00, green:1.00, blue:1.00, alpha:1.0), for: .normal)
         buttonOne.backgroundColor = UIColor(red:0.40, green:0.37, blue:1.00, alpha:1.0)
-        buttonOne.addTarget(self, action: #selector(handleShowProjects), for: .touchUpInside)
+        buttonOne.addTarget(self, action: #selector(handleShowTasks), for: .touchUpInside)
         buttonOne.layer.cornerRadius = 10
         return buttonOne
     }()
@@ -142,6 +142,10 @@ class DetailProjectViewController: UIViewController {
     
     @objc func handleShowProjects() {
         navigationController?.popViewController(animated: true)
+    }
+    
+    @objc func handleShowTasks() {
+        navigationController?.pushViewController(ShowTasksViewController(), animated: true)
     }
     
     func configureViewComponents() {
