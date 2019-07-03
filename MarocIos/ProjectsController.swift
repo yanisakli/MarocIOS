@@ -113,10 +113,21 @@ extension ProjectsController : UITableViewDelegate, UITableViewDataSource{
         cell.namelbl.text = userArr[indexPath.row].subject
         cell.prvlbl.text = userArr[indexPath.row].prv
         
+        cell.cellDelegate = self
+        cell.index = indexPath
+        
         return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 120
     }
+}
+
+extension ProjectsController : TableViewNew{
+    func onClickCell(index : Int, idProject : String){
+       print(idProject)
+        navigationController?.pushViewController(AddProjectController(), animated: true)
+    }
+    
 }
