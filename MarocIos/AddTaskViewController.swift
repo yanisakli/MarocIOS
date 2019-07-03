@@ -13,6 +13,7 @@ import FirebaseDatabase
 class AddTaskViewController: UIViewController {
     
     var refProjects:DatabaseReference!
+    var idProject : String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,7 +24,7 @@ class AddTaskViewController: UIViewController {
     @objc func addTask(){
         let key = refProjects.childByAutoId().key
         let project = [ "id" : key,
-                        "idProject" : "-Lie6B8DuJuZ4o4iM90K",
+                        "idProject" : idProject!,
                         "name" : nameTextField.text! as String,
                         "responsable" : responsableTextField.text! as String,
         ]
