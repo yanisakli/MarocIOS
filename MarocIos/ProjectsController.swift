@@ -12,10 +12,12 @@ import Firebase
 class ProjectModal {
     var subject: String?
     var prv: String?
+    var id: String?
     
-    init( subject: String, prv: String) {
+    init( subject: String, prv: String, id: String) {
         self.subject = subject
         self.prv = prv
+        self.id = id
     }
 }
 class ProjectsController: UIViewController {
@@ -38,9 +40,10 @@ class ProjectsController: UIViewController {
                     let projectObject = projects.value as? [String: String]
                     let projectSubject = projectObject?["subject"]
                     let projectPrv = projectObject?["isPrivate"]
+                    let projectId = projectObject?["id"]
                     
                     let prive =  (projectPrv )! == "true" ? "privé" : "public"
-                    let project = ProjectModal(subject: (projectSubject )!, prv: prive);
+                    let project = ProjectModal(subject: (projectSubject )!, prv: prive, id: (projectId )!);
                     self.userArr.append(project)
                 }
                 self.tableView.reloadData()
@@ -112,6 +115,7 @@ extension ProjectsController : UITableViewDelegate, UITableViewDataSource{
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as? CustomTableViewCell else {fatalError("Unabel to create cell")}
         cell.namelbl.text = userArr[indexPath.row].subject
         cell.prvlbl.text = userArr[indexPath.row].prv
+        cell.idProjectlbl.text = userArr[indexPath.row].id
         
         cell.cellDelegate = self
         cell.index = indexPath

@@ -80,7 +80,7 @@ class CustomTableViewCell: UITableViewCell {
     }
     
     @objc func handleDetailProjects() {
-        cellDelegate?.onClickCell(index: (index?.row)!,  idProject: prvlbl.text!)
+        cellDelegate?.onClickCell(index: (index?.row)!,  idProject: idProjectlbl.text!)
     }
 
 
