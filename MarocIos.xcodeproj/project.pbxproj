@@ -14,6 +14,7 @@
 		04C1780D22CBD645006FBD71 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C1780C22CBD645006FBD71 /* CustomTableViewCell.swift */; };
 		04C1780F22CC0763006FBD71 /* PrivacyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C1780E22CC0763006FBD71 /* PrivacyViewController.swift */; };
 		04C1781122CC0773006FBD71 /* AboutUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C1781022CC0773006FBD71 /* AboutUsViewController.swift */; };
+		04C1781322CD34C1006FBD71 /* DetailProjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C1781222CD34C1006FBD71 /* DetailProjectViewController.swift */; };
 		238D7BE121DDBF1B0042CE88 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238D7BE021DDBF1B0042CE88 /* AppDelegate.swift */; };
 		238D7BE621DDBF1B0042CE88 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 238D7BE421DDBF1B0042CE88 /* Main.storyboard */; };
 		238D7BE821DDBF1C0042CE88 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 238D7BE721DDBF1C0042CE88 /* Assets.xcassets */; };
@@ -34,6 +35,7 @@
 		04C1780C22CBD645006FBD71 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CustomTableViewCell.swift; path = MarocIos/CustomTableViewCell.swift; sourceTree = SOURCE_ROOT; };
 		04C1780E22CC0763006FBD71 /* PrivacyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PrivacyViewController.swift; path = MarocIos/PrivacyViewController.swift; sourceTree = SOURCE_ROOT; };
 		04C1781022CC0773006FBD71 /* AboutUsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AboutUsViewController.swift; path = MarocIos/AboutUsViewController.swift; sourceTree = SOURCE_ROOT; };
+		04C1781222CD34C1006FBD71 /* DetailProjectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DetailProjectViewController.swift; path = MarocIos/DetailProjectViewController.swift; sourceTree = SOURCE_ROOT; };
 		238D7BDD21DDBF1B0042CE88 /* MarocIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MarocIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		238D7BE021DDBF1B0042CE88 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		238D7BE521DDBF1B0042CE88 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 				04C1780822C92CC1006FBD71 /* AddProjectController.swift */,
 				04C1780E22CC0763006FBD71 /* PrivacyViewController.swift */,
 				04C1781022CC0773006FBD71 /* AboutUsViewController.swift */,
+				04C1781222CD34C1006FBD71 /* DetailProjectViewController.swift */,
 			);
 			path = MarocIOS;
 			sourceTree = "<group>";
@@ -255,6 +258,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04C1781322CD34C1006FBD71 /* DetailProjectViewController.swift in Sources */,
 				04C177F922C912D7006FBD71 /* SettingsController.swift in Sources */,
 				04C1781122CC0773006FBD71 /* AboutUsViewController.swift in Sources */,
 				04C1780922C92CC1006FBD71 /* AddProjectController.swift in Sources */,
