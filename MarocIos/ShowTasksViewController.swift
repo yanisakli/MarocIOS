@@ -143,7 +143,7 @@ extension ShowTasksViewController : UITableViewDelegate, UITableViewDataSource{
 
 extension ShowTasksViewController : TaskTableViewNew {
     func onClickCell(index : Int, idTask : String){
-        print(idTask)
+        Database.database().reference().child("tasks").child("\(idTask)").removeValue()
     }
     
 }
