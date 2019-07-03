@@ -103,10 +103,10 @@
 				238D7BF621DDBF560042CE88 /* HomeController.swift */,
 				238D7BF821DDBF660042CE88 /* Extensions.swift */,
 				04C177F822C912D7006FBD71 /* SettingsController.swift */,
+				04C1780C22CBD645006FBD71 /* CustomTableViewCell.swift */,
 				04C177FA22C912F0006FBD71 /* ProjectsController.swift */,
 				04C1780022C91B64006FBD71 /* ProfileController.swift */,
 				04C1780822C92CC1006FBD71 /* AddProjectController.swift */,
-				04C1780C22CBD645006FBD71 /* CustomTableViewCell.swift */,
 				04C1780E22CC0763006FBD71 /* PrivacyViewController.swift */,
 				04C1781022CC0773006FBD71 /* AboutUsViewController.swift */,
 			);

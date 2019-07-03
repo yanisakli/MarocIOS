@@ -94,6 +94,10 @@ class ProjectsController: UIViewController {
         navigationController?.title = "Projects"
         navigationController?.navigationBar.isHidden = true
     }
+    
+    func handleDetailProject() {
+        navigationController?.pushViewController(AddProjectController(), animated: true)
+    }
 
 }
 

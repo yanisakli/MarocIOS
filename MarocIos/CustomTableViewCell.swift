@@ -25,10 +25,24 @@ class CustomTableViewCell: UITableViewCell {
     }()
     
     lazy var prvlbl: UILabel = {
-        let lbl = UILabel(frame: CGRect(x: 300, y: 50, width: backView.frame.width - 116, height: 30))
+        let lbl = UILabel(frame: CGRect(x: 50, y: 50, width: backView.frame.width - 116, height: 30))
         lbl.textAlignment = .left
         return lbl
     }()
+    
+    let actionButton: UIButton = {
+        let button = UIButton(frame: CGRect(x: 260, y: 50, width: 100, height: 30))
+        button.setTitle("Details", for: .normal)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.titleLabel?.font = UIFont.systemFont(ofSize: 18)
+        button.setTitleColor(UIColor(red:0.16, green:0.18, blue:0.26, alpha:1.0), for: .normal)
+        button.backgroundColor = UIColor.cyan
+        button.layer.cornerRadius = 10
+        button.addTarget(self, action: Selector("handleDetailProjects"), for: .touchUpInside)
+
+        return button
+    }()
+
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -47,6 +61,11 @@ class CustomTableViewCell: UITableViewCell {
         addSubview(backView)
         backView.addSubview(namelbl)
         backView.addSubview(prvlbl)
+        backView.addSubview(actionButton)
     }
+    
+    @objc func handleDetailProjects() {
+    }
+
 
 }
