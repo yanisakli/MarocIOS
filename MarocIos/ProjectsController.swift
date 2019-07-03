@@ -130,7 +130,6 @@ extension ProjectsController : UITableViewDelegate, UITableViewDataSource{
 
 extension ProjectsController : TableViewNew{
     func onClickCell(index : Int, idProject : String){
-       print(idProject)
         let vc = DetailProjectViewController()
         vc.idProject = idProject
         navigationController?.pushViewController(vc, animated: true)

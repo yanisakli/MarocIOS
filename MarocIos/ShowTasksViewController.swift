@@ -24,6 +24,7 @@ class ShowTasksViewController: UIViewController {
     
     var tableView = UITableView()
     var userArr = [TaskModal]()
+    var idProject : String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -102,7 +103,9 @@ class ShowTasksViewController: UIViewController {
     
     
     @objc func handleAddTask() {
-        navigationController?.pushViewController(AddTaskViewController(), animated: true)
+        let vc = AddTaskViewController()
+        vc.idProject = idProject
+        navigationController?.pushViewController(vc, animated: true)
     }
     
     @objc func handleBack() {
@@ -143,7 +146,7 @@ extension ShowTasksViewController : UITableViewDelegate, UITableViewDataSource{
 
 extension ShowTasksViewController : TaskTableViewNew {
     func onClickCell(index : Int, idTask : String){
-        print(idTask)
+        Database.database().reference().child("tasks").child("\(idTask)").removeValue()
     }
     
 }

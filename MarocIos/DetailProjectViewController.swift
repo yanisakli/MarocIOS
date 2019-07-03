@@ -145,7 +145,9 @@ class DetailProjectViewController: UIViewController {
     }
     
     @objc func handleShowTasks() {
-        navigationController?.pushViewController(ShowTasksViewController(), animated: true)
+        let vc = ShowTasksViewController()
+        vc.idProject = idProject
+        navigationController?.pushViewController(vc, animated: true)
     }
     
     func configureViewComponents() {
