@@ -41,10 +41,14 @@ class ShowTasksViewController: UIViewController {
                     let taskObject = tasks.value as? [String: String]
                     let taskName = taskObject?["name"]
                     let taskResponsable = taskObject?["responsable"]
+                    let idProject = taskObject?["idProject"]
                     let taskId = taskObject?["id"]
                     
                     let task = TaskModal(name: (taskName )!, responsable: (taskResponsable )!, id: (taskId )!);
-                    self.userArr.append(task)
+                    if idProject == self.idProject{
+                        self.userArr.append(task)
+                    }
+                    
                 }
                 self.tableView.reloadData()
             }

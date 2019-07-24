@@ -91,7 +91,7 @@ class DetailProjectViewController: UIViewController {
     
     let AbortButton: UIButton = {
         let buttonOne = UIButton(type: .system)
-        buttonOne.setTitle("Abort", for: .normal)
+        buttonOne.setTitle("Back", for: .normal)
         buttonOne.titleLabel?.font = UIFont.systemFont(ofSize: 18)
         buttonOne.setTitleColor(UIColor(red:1.00, green:1.00, blue:1.00, alpha:1.0), for: .normal)
         buttonOne.backgroundColor = UIColor(red:0.40, green:0.37, blue:1.00, alpha:1.0)
