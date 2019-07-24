@@ -8,16 +8,16 @@
 
 import UIKit
 
-protocol FriendsTableViewNew {
+protocol UsersTableViewNew {
     func onClickCell(index : Int, idFriend: String)
 }
 
-class FriendsTableViewCell: UITableViewCell {
+class UsersTableViewCell: UITableViewCell {
     
     var cellDelegate : FriendsTableViewNew?
     var index : IndexPath?
     var idFriend : String?
-    
+
     lazy var backView: UIView = {
         let view = UIView(frame: CGRect(x: 10, y: 6, width: self.frame.width - 20, height: 110))
         view.backgroundColor = UIColor(red:0.40, green:0.37, blue:1.00, alpha:1.0)
@@ -46,11 +46,11 @@ class FriendsTableViewCell: UITableViewCell {
     
     let actionButton: UIButton = {
         let button = UIButton(type: .system)
-        button.setTitle("Remove", for: .normal)
+        button.setTitle("Add", for: .normal)
         button.translatesAutoresizingMaskIntoConstraints = false
         button.titleLabel?.font = UIFont.systemFont(ofSize: 10)
         button.setTitleColor(UIColor.black, for: .normal)
-        button.backgroundColor = UIColor.red
+        button.backgroundColor = UIColor.cyan
         button.layer.cornerRadius = 10
         
         return button
@@ -60,7 +60,7 @@ class FriendsTableViewCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
     }
-    
+
     override func layoutSubviews() {
         contentView.backgroundColor = UIColor.clear
         backgroundColor = UIColor.clear
@@ -83,5 +83,5 @@ class FriendsTableViewCell: UITableViewCell {
     @objc func handleDetailProjects() {
         cellDelegate?.onClickCell(index: (index?.row)!,  idFriend: idFriendlbl.text!)
     }
-    
+
 }
