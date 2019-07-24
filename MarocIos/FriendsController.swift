@@ -42,9 +42,9 @@ class FriendsController: UIViewController {
                     let friendObject = friends.value as? [String: String]
                     let friendName = friendObject?["nameUser"]
                     let friendEmail = friendObject?["emailUser"]
-                    let friendId = friendObject?["id"]
+                    let friendId = friends.key
                     
-                    let friend = FriendModal(name: (friendName )!, email: (friendEmail )!, id: (friendId )!);
+                    let friend = FriendModal(name: (friendName )!, email: (friendEmail )!, id: friendId );
                     self.userArr.append(friend)
                 }
                 self.tableView.reloadData()
@@ -136,7 +136,7 @@ extension FriendsController : UITableViewDelegate, UITableViewDataSource{
 
 extension FriendsController : FriendsTableViewNew {
     func onClickCell(index : Int, idFriend : String){
-        Database.database().reference().child("users").child("\(idFriend)").removeValue()
+        Database.database().reference().child("friends").child("\(idFriend)").removeValue()
     }
     
 }
