@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import FirebaseDatabase
 
 class UserModal {
     var name: String?
@@ -23,6 +24,7 @@ class UserModal {
 
 class UsersViewController: UIViewController {
     
+    var refProjects:DatabaseReference!
     var tableView = UITableView()
     var userArr = [UserModal]()
     var idProject : String?
@@ -31,21 +33,23 @@ class UsersViewController: UIViewController {
         super.viewDidLoad()
         configureViewComponents()
         setTableView()
+        refProjects = Database.database().reference().child("friends")
+
         
         let refTasks = Database.database().reference().child("users")
         refTasks.observe(DataEventType.value, with: {(snapshot) in
             if snapshot.childrenCount > 0 {
                 self.userArr.removeAll()
                 
-                for friends in snapshot.children.allObjects as! [DataSnapshot]{
+                for users in snapshot.children.allObjects as! [DataSnapshot]{
                     
-                    let friendObject = friends.value as? [String: String]
-                    let friendName = (friendObject?["name"])! + " " + (friendObject?["familyName"])!
-                    let friendEmail = friendObject?["email"]
-                    let friendId = friends.key
+                    let userObject = users.value as? [String: String]
+                    let userName = (userObject?["name"])! + " " + (userObject?["familyName"])!
+                    let userEmail = userObject?["email"]
+                    let userId = users.key
                     
-                    let friend = UserModal(name: (friendName ), email: (friendEmail )!, id: (friendId ));
-                    self.userArr.append(friend)
+                    let user = UserModal(name: (userName ), email: (userEmail )!, id: (userId ));
+                    self.userArr.append(user)
                 }
                 self.tableView.reloadData()
             }
@@ -103,7 +107,7 @@ extension UsersViewController : UITableViewDelegate, UITableViewDataSource{
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "CellUsers", for: indexPath) as? UsersTableViewCell else {fatalError("Unabel to create cell")}
         cell.namelbl.text = userArr[indexPath.row].name
         cell.emaillbl.text = userArr[indexPath.row].email
-        cell.idFriendlbl.text = userArr[indexPath.row].id
+        cell.idUserlbl.text = userArr[indexPath.row].id
         
         cell.cellDelegate = self
         cell.index = indexPath
@@ -116,9 +120,17 @@ extension UsersViewController : UITableViewDelegate, UITableViewDataSource{
     }
 }
 
-extension UsersViewController : FriendsTableViewNew {
-    func onClickCell(index : Int, idFriend : String){
-        Database.database().reference().child("users").child("\(idFriend)").removeValue()
+extension UsersViewController : UsersTableViewNew {
+    func onClickCell(index : Int, idUser: String, nameUser: String, emailUser: String ){
+       // Database.database().reference().child("users").child("\(idFriend)").removeValue()
+        let key = refProjects.childByAutoId().key
+        let friend = [ "id" : key,
+                        "idUser" : idUser,
+                        "nameUser" : nameUser,
+                        "emailUser" : emailUser,
+        ]
+        refProjects.child(key!).setValue(friend)
+        navigationController?.popViewController(animated: true)
     }
     
 }

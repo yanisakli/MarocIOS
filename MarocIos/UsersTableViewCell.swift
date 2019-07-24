@@ -1,5 +1,4 @@
 //
-//  FriendsTableViewCell.swift
 //  MarocIOS
 //
 //  Created by Yanis A on 24/07/2019.
@@ -9,14 +8,16 @@
 import UIKit
 
 protocol UsersTableViewNew {
-    func onClickCell(index : Int, idFriend: String)
+    func onClickCell(index : Int, idUser: String, nameUser: String, emailUser: String )
 }
 
 class UsersTableViewCell: UITableViewCell {
     
-    var cellDelegate : FriendsTableViewNew?
+    var cellDelegate : UsersTableViewNew?
     var index : IndexPath?
-    var idFriend : String?
+    var idUser : String?
+    var nameUser : String?
+    var emailUser : String?
 
     lazy var backView: UIView = {
         let view = UIView(frame: CGRect(x: 10, y: 6, width: self.frame.width - 20, height: 110))
@@ -38,7 +39,7 @@ class UsersTableViewCell: UITableViewCell {
         return lbl
     }()
     
-    lazy var idFriendlbl: UILabel = {
+    lazy var idUserlbl: UILabel = {
         let lbl = UILabel(frame: CGRect(x: 50, y: 50, width: backView.frame.width - 116, height: 30))
         lbl.textAlignment = .left
         return lbl
@@ -81,7 +82,7 @@ class UsersTableViewCell: UITableViewCell {
     }
     
     @objc func handleDetailProjects() {
-        cellDelegate?.onClickCell(index: (index?.row)!,  idFriend: idFriendlbl.text!)
+        cellDelegate?.onClickCell(index: (index?.row)!,  idUser: idUserlbl.text!,nameUser:namelbl.text!,emailUser:emaillbl.text!)
     }
 
 }

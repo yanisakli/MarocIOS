@@ -32,7 +32,7 @@ class FriendsController: UIViewController {
         configureViewComponents()
         setTableView()
         
-        let refTasks = Database.database().reference().child("users")
+        let refTasks = Database.database().reference().child("friends")
         refTasks.observe(DataEventType.value, with: {(snapshot) in
             if snapshot.childrenCount > 0 {
                 self.userArr.removeAll()
@@ -40,11 +40,11 @@ class FriendsController: UIViewController {
                 for friends in snapshot.children.allObjects as! [DataSnapshot]{
                     
                     let friendObject = friends.value as? [String: String]
-                    let friendName = (friendObject?["name"])! + " " + (friendObject?["familyName"])!
-                    let friendEmail = friendObject?["email"]
-                    let friendId = friends.key 
+                    let friendName = friendObject?["nameUser"]
+                    let friendEmail = friendObject?["emailUser"]
+                    let friendId = friendObject?["id"]
                     
-                    let friend = FriendModal(name: (friendName ), email: (friendEmail )!, id: (friendId ));
+                    let friend = FriendModal(name: (friendName )!, email: (friendEmail )!, id: (friendId )!);
                     self.userArr.append(friend)
                 }
                 self.tableView.reloadData()
