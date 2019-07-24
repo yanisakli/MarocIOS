@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04A1C08022E89DCF00A4803A /* FriendsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A1C07F22E89DCF00A4803A /* FriendsController.swift */; };
+		04A1C08222E89E2C00A4803A /* FriendsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A1C08122E89E2C00A4803A /* FriendsTableViewCell.swift */; };
 		04C177F922C912D7006FBD71 /* SettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C177F822C912D7006FBD71 /* SettingsController.swift */; };
 		04C177FB22C912F0006FBD71 /* ProjectsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C177FA22C912F0006FBD71 /* ProjectsController.swift */; };
 		04C1780122C91B64006FBD71 /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C1780022C91B64006FBD71 /* ProfileController.swift */; };
@@ -31,6 +33,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		04A1C07F22E89DCF00A4803A /* FriendsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FriendsController.swift; path = MarocIos/FriendsController.swift; sourceTree = SOURCE_ROOT; };
+		04A1C08122E89E2C00A4803A /* FriendsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FriendsTableViewCell.swift; path = MarocIos/FriendsTableViewCell.swift; sourceTree = SOURCE_ROOT; };
 		04C177F822C912D7006FBD71 /* SettingsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsController.swift; sourceTree = "<group>"; };
 		04C177FA22C912F0006FBD71 /* ProjectsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsController.swift; sourceTree = "<group>"; };
 		04C1780022C91B64006FBD71 /* ProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileController.swift; sourceTree = "<group>"; };
@@ -121,6 +125,8 @@
 				04C1781422CD54CD006FBD71 /* ShowTasksViewController.swift */,
 				04C1781622CD55A3006FBD71 /* TaskTableViewCell.swift */,
 				04C1781822CD57F7006FBD71 /* AddTaskViewController.swift */,
+				04A1C07F22E89DCF00A4803A /* FriendsController.swift */,
+				04A1C08122E89E2C00A4803A /* FriendsTableViewCell.swift */,
 			);
 			path = MarocIOS;
 			sourceTree = "<group>";
@@ -267,6 +273,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04A1C08022E89DCF00A4803A /* FriendsController.swift in Sources */,
 				04C1781322CD34C1006FBD71 /* DetailProjectViewController.swift in Sources */,
 				04C1781922CD57F7006FBD71 /* AddTaskViewController.swift in Sources */,
 				04C177F922C912D7006FBD71 /* SettingsController.swift in Sources */,
@@ -275,6 +282,7 @@
 				04C1780922C92CC1006FBD71 /* AddProjectController.swift in Sources */,
 				04C1780D22CBD645006FBD71 /* CustomTableViewCell.swift in Sources */,
 				238D7BF921DDBF660042CE88 /* Extensions.swift in Sources */,
+				04A1C08222E89E2C00A4803A /* FriendsTableViewCell.swift in Sources */,
 				238D7BF721DDBF560042CE88 /* HomeController.swift in Sources */,
 				04C177FB22C912F0006FBD71 /* ProjectsController.swift in Sources */,
 				238D7BF321DDBF2A0042CE88 /* LoginController.swift in Sources */,
